@@ -7,7 +7,6 @@ const GithubIcon = ({ className = "w-4 h-4" }) => (
   </svg>
 );
 
-
 export default function Footer({ setActiveTab }) {
   return (
     <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
@@ -49,6 +48,16 @@ export default function Footer({ setActiveTab }) {
                 </button>
               </li>
               <li>
+                <button onClick={() => setActiveTab('validator')} className="hover:text-blue-600 transition">
+                  PFMS Name Mismatch Check
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActiveTab('bonafide')} className="hover:text-blue-600 transition">
+                  Bonafide Certificate Generator
+                </button>
+              </li>
+              <li>
                 <button onClick={() => setActiveTab('docs')} className="hover:text-blue-600 transition">
                   Document Readiness Audit
                 </button>
@@ -56,11 +65,6 @@ export default function Footer({ setActiveTab }) {
               <li>
                 <button onClick={() => setActiveTab('tracker')} className="hover:text-blue-600 transition">
                   Application Tracker
-                </button>
-              </li>
-              <li>
-                <button onClick={() => setActiveTab('guides')} className="hover:text-blue-600 transition">
-                  NSP OTR & DBT Guide
                 </button>
               </li>
             </ul>
@@ -108,13 +112,13 @@ export default function Footer({ setActiveTab }) {
               JANSAAHAY is an informational public welfare platform. All schemes, deadlines, and grants are compiled from official gazette notifications and official state/central scholarship portals.
             </p>
             <a
-              href="https://github.com/dharshanmende-afk"
+              href="https://github.com/dharshanmende-afk/JANSAHAY-2"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 text-xs font-medium transition"
             >
               <GithubIcon className="w-4 h-4" />
-              <span>github.com/dharshanmende-afk</span>
+              <span>github.com/dharshanmende-afk/JANSAHAY-2</span>
             </a>
           </div>
 
@@ -123,12 +127,12 @@ export default function Footer({ setActiveTab }) {
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
           <div>
-            © {new Date().getFullYear()} <strong>JANSAAHAY</strong> (जनसहाय). Built with care for Indian students.
+            © {new Date().getFullYear()} <strong>JANSAAHAY 2.0</strong> (जनसहाय). Built with care for Indian students.
           </div>
           <div className="flex items-center space-x-1">
             <span>Designed & Engineered by</span>
             <a 
-              href="https://github.com/dharshanmende-afk"
+              href="https://github.com/dharshanmende-afk/JANSAHAY-2"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"

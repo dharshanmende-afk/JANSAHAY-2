@@ -161,14 +161,14 @@ export default function Navbar({
 
             {/* GitHub Author Link */}
             <a
-              href="https://github.com/dharshanmende-afk/jansahay"
+              href="https://github.com/dharshanmende-afk/JANSAHAY-2"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center space-x-1"
               title="Built by dharshanmende-afk on GitHub"
             >
               <GithubIcon className="w-4 h-4" />
-              <span className="text-xs font-mono hidden lg:inline">jansahay</span>
+              <span className="text-xs font-mono hidden lg:inline">JANSAHAY-2</span>
             </a>
 
             {/* Mobile Menu Button */}
