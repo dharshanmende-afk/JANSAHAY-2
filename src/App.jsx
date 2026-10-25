@@ -3,11 +3,14 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ScholarshipList from './components/ScholarshipList';
 import EligibilityChecker from './components/EligibilityChecker';
+import NameMismatchValidator from './components/NameMismatchValidator';
+import BonafideGenerator from './components/BonafideGenerator';
 import DocumentReadinessTool from './components/DocumentReadinessTool';
 import ApplicationTracker from './components/ApplicationTracker';
 import PortalGuides from './components/PortalGuides';
 import FaqSection from './components/FaqSection';
 import ScholarshipDetailModal from './components/ScholarshipDetailModal';
+import ScholarshipCompareModal from './components/ScholarshipCompareModal';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -15,6 +18,17 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedScholarship, setSelectedScholarship] = useState(null);
+  const [isCompareOpen, setIsCompareOpen] = useState(false);
+
+  // Language state persisted in localStorage
+  const [language, setLanguage] = useState(() => {
+    try {
+      const saved = localStorage.getItem('jansaahay_lang');
+      return saved || 'en';
+    } catch (e) {
+      return 'en';
+    }
+  });
 
   // Bookmarks / Saved scholarships state persisted in localStorage
   const [bookmarkedIds, setBookmarkedIds] = useState(() => {
@@ -36,6 +50,12 @@ export default function App() {
       return false;
     }
   });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('jansaahay_lang', language);
+    } catch (e) {}
+  }, [language]);
 
   useEffect(() => {
     try {
@@ -74,6 +94,9 @@ export default function App() {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
         onOpenMatcher={() => setActiveTab('checker')}
+        onOpenCompare={() => setIsCompareOpen(true)}
+        language={language}
+        setLanguage={setLanguage}
       />
 
       {/* Hero section on Browse tab */}
@@ -84,8 +107,12 @@ export default function App() {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           onAuditDocs={() => setActiveTab('docs')}
+          onOpenValidator={() => setActiveTab('validator')}
+          onOpenBonafide={() => setActiveTab('bonafide')}
+          onOpenCompare={() => setIsCompareOpen(true)}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
+          language={language}
         />
       )}
 
@@ -110,6 +137,14 @@ export default function App() {
             bookmarkedIds={bookmarkedIds}
             toggleBookmark={toggleBookmark}
           />
+        )}
+
+        {activeTab === 'validator' && (
+          <NameMismatchValidator />
+        )}
+
+        {activeTab === 'bonafide' && (
+          <BonafideGenerator />
         )}
 
         {activeTab === 'docs' && (
@@ -143,6 +178,16 @@ export default function App() {
           toggleBookmark={toggleBookmark}
         />
       )}
+
+      {/* Scholarship Side-by-Side Compare Modal */}
+      <ScholarshipCompareModal
+        isOpen={isCompareOpen}
+        onClose={() => setIsCompareOpen(false)}
+        onSelectScholarship={(sch) => {
+          setIsCompareOpen(false);
+          setSelectedScholarship(sch);
+        }}
+      />
 
       {/* Footer */}
       <Footer setActiveTab={setActiveTab} />

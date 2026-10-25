@@ -11,8 +11,13 @@ import {
   Sun, 
   Menu, 
   X, 
-  Sparkles
+  Sparkles,
+  ShieldAlert,
+  FileText,
+  Scale,
+  Languages
 } from 'lucide-react';
+import { TRANSLATIONS } from '../data/translations';
 
 const GithubIcon = ({ className = "w-4 h-4" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -20,37 +25,52 @@ const GithubIcon = ({ className = "w-4 h-4" }) => (
   </svg>
 );
 
-
 export default function Navbar({ 
   activeTab, 
   setActiveTab, 
   bookmarksCount, 
   darkMode, 
   setDarkMode,
-  onOpenMatcher
+  onOpenMatcher,
+  onOpenCompare,
+  language = "en",
+  setLanguage
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const t = TRANSLATIONS[language] || TRANSLATIONS.en;
 
   const navItems = [
-    { id: 'browse', label: 'Explore Scholarships', icon: Search },
-    { id: 'checker', label: 'Eligibility Matcher', icon: CheckCircle2, badge: 'Smart' },
-    { id: 'docs', label: 'Document Readiness', icon: FileCheck },
-    { id: 'tracker', label: 'Saved & Tracker', icon: Bookmark, count: bookmarksCount },
-    { id: 'guides', label: 'Portal Guides', icon: BookOpen },
-    { id: 'faq', label: 'Helpline & FAQ', icon: HelpCircle },
+    { id: 'browse', label: t.explore, icon: Search },
+    { id: 'checker', label: t.matcher, icon: CheckCircle2, badge: 'Smart' },
+    { id: 'validator', label: t.validator, icon: ShieldAlert, badge: 'PFMS' },
+    { id: 'bonafide', label: t.bonafide, icon: FileText, badge: 'New' },
+    { id: 'docs', label: t.docs, icon: FileCheck },
+    { id: 'tracker', label: t.tracker, icon: Bookmark, count: bookmarksCount },
+    { id: 'guides', label: t.guides, icon: BookOpen },
+    { id: 'faq', label: t.faq, icon: HelpCircle },
+  ];
+
+  const languageOptions = [
+    { code: "en", label: "English" },
+    { code: "hi", label: "हिंदी" },
+    { code: "te", label: "తెలుగు" },
+    { code: "ta", label: "தமிழ்" },
+    { code: "kn", label: "ಕನ್ನಡ" },
+    { code: "mr", label: "मराठी" }
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md transition-colors">
-      {/* Top micro-bar */}
-      <div className="bg-gradient-to-r from-orange-500 via-blue-600 to-emerald-600 h-1 w-full" />
+    <header className="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors">
+      {/* Top micro-bar with Indian Tricolor Accent */}
+      <div className="bg-gradient-to-r from-orange-500 via-blue-600 to-emerald-600 h-1.5 w-full" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          
           {/* Brand Logo */}
           <div 
             onClick={() => setActiveTab('browse')} 
-            className="flex items-center space-x-3 cursor-pointer group select-none"
+            className="flex items-center space-x-3 cursor-pointer group select-none shrink-0"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
               <GraduationCap className="w-6 h-6" />
@@ -64,14 +84,14 @@ export default function Navbar({
                   जनसहाय
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium hidden sm:block">
-                National Scholarship & Financial Aid Ecosystem
+              <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium hidden sm:block truncate max-w-xs">
+                {t.brandTag}
               </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden xl:flex items-center space-x-0.5">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
@@ -79,21 +99,21 @@ export default function Navbar({
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`flex items-center space-x-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`flex items-center space-x-1 px-2.5 py-2 rounded-lg text-xs font-semibold transition-all ${
                     isActive
-                      ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-400 font-semibold shadow-sm'
+                      ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-400 font-bold shadow-sm'
                       : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60'
                   }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400'}`} />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400'}`} />
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 ml-1">
+                    <span className="text-[9px] font-bold px-1.5 py-0.2 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 ml-0.5">
                       {item.badge}
                     </span>
                   )}
                   {item.count !== undefined && item.count > 0 && (
-                    <span className="text-xs font-bold px-1.5 py-0.5 rounded-full bg-blue-600 text-white ml-1">
+                    <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-blue-600 text-white ml-0.5">
                       {item.count}
                     </span>
                   )}
@@ -102,16 +122,33 @@ export default function Navbar({
             })}
           </nav>
 
-          {/* Action buttons on desktop */}
-          <div className="flex items-center space-x-2">
-            {/* Quick Check Matcher Button */}
+          {/* Action buttons on right */}
+          <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+            
+            {/* Compare Tool Shortcut */}
             <button
-              onClick={onOpenMatcher}
-              className="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-500/20 hover:from-blue-700 hover:to-indigo-700 transition active:scale-95"
+              onClick={onOpenCompare}
+              className="p-2 rounded-lg text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center space-x-1 text-xs font-semibold"
+              title="Compare Scholarships"
             >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Check Eligibility</span>
+              <Scale className="w-4 h-4 text-indigo-500" />
+              <span className="hidden md:inline">Compare</span>
             </button>
+
+            {/* Language Switcher */}
+            <div className="relative flex items-center">
+              <Languages className="w-3.5 h-3.5 absolute left-2 text-slate-400 pointer-events-none" />
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+                className="pl-7 pr-2 py-1.5 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                title="Select Language"
+              >
+                {languageOptions.map(opt => (
+                  <option key={opt.code} value={opt.code}>{opt.label}</option>
+                ))}
+              </select>
+            </div>
 
             {/* Dark Mode Toggle */}
             <button
@@ -124,20 +161,20 @@ export default function Navbar({
 
             {/* GitHub Author Link */}
             <a
-              href="https://github.com/dharshanmende-afk"
+              href="https://github.com/dharshanmende-afk/jansahay"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center space-x-1"
               title="Built by dharshanmende-afk on GitHub"
             >
               <GithubIcon className="w-4 h-4" />
-              <span className="text-xs font-mono hidden md:inline">dharshanmende-afk</span>
+              <span className="text-xs font-mono hidden lg:inline">jansahay</span>
             </a>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="xl:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -148,7 +185,7 @@ export default function Navbar({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-2 duration-200">
+        <div className="xl:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-2 duration-200">
           <div className="grid grid-cols-1 gap-1">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -190,6 +227,17 @@ export default function Navbar({
           <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col space-y-2">
             <button
               onClick={() => {
+                onOpenCompare();
+                setMobileMenuOpen(false);
+              }}
+              className="w-full flex items-center justify-center space-x-2 py-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 font-semibold text-xs border border-indigo-200 dark:border-indigo-800"
+            >
+              <Scale className="w-4 h-4" />
+              <span>Compare Scholarships Matrix</span>
+            </button>
+
+            <button
+              onClick={() => {
                 onOpenMatcher();
                 setMobileMenuOpen(false);
               }}
@@ -198,15 +246,6 @@ export default function Navbar({
               <Sparkles className="w-4 h-4" />
               <span>Launch Eligibility Matcher</span>
             </button>
-            <a
-              href="https://github.com/dharshanmende-afk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center space-x-2 py-2 text-xs text-slate-500 dark:text-slate-400 hover:text-blue-600"
-            >
-              <GithubIcon className="w-3.5 h-3.5" />
-              <span>GitHub: @dharshanmende-afk</span>
-            </a>
           </div>
         </div>
       )}
