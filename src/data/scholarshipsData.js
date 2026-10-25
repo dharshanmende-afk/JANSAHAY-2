@@ -1,4 +1,7 @@
 export const SCHOLARSHIPS_DATA = [
+  // ==========================================
+  // 1. CENTRAL GOVERNMENT (NSP SCHEMES)
+  // ==========================================
   {
     id: "nsp-pm-usp-central-sector",
     name: "PM-USP Central Sector Scheme of Scholarship for College and University Students",
@@ -17,7 +20,7 @@ export const SCHOLARSHIPS_DATA = [
     deadline: "2026-11-30",
     status: "Open",
     daysLeft: 36,
-    fullScope: "To provide financial assistance to meritorious students from low-income families to meet their day-to-day expenses while pursuing higher studies in colleges and universities. Allocated on a 50:50 ratio between boys and girls, with 82,000 fresh scholarships distributed annually across state boards.",
+    fullScope: "To provide financial assistance to meritorious students from low-income families to meet their day-to-day expenses while pursuing higher studies in colleges and universities. 82,000 fresh scholarships distributed annually across state boards in a 50:50 ratio between boys and girls.",
     benefits: [
       "₹12,000 per annum at Graduation level for first 3 years of College/University study",
       "₹20,000 per annum at Post-Graduation level (for 4th and 5th year)",
@@ -54,115 +57,6 @@ export const SCHOLARSHIPS_DATA = [
     ],
     featured: true,
     tags: ["Central Govt", "NSP", "Degree", "Undergraduate", "Merit-cum-Means"]
-  },
-  {
-    id: "aicte-pragati-girls",
-    name: "AICTE Pragati Scholarship Scheme for Girl Students",
-    provider: "All India Council for Technical Education (AICTE)",
-    badge: "AICTE Technical",
-    category: "Girls Only",
-    amount: "₹50,000 per annum + Contingency",
-    maxAmountNumeric: 50000,
-    level: ["Undergraduate", "Diploma/ITI"],
-    applicableStates: "All India",
-    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
-    gender: "Female",
-    incomeCeiling: 800000,
-    incomeCeilingText: "Less than ₹8.0 Lakh / year",
-    minMarks: 50,
-    deadline: "2026-11-15",
-    status: "Closing Soon",
-    daysLeft: 21,
-    fullScope: "A landmark initiative aimed at empowering female students to pursue technical education. AICTE awards 10,000 scholarships each year (5,000 for Degree and 5,000 for Diploma) covering college tuition fees, purchase of laptop/computer, software, books, and competitive exam fees.",
-    benefits: [
-      "₹50,000 lump sum per annum for every year of study (up to 4 years for Degree, 3 years for Diploma)",
-      "Can be utilized towards tuition fee payment, laptop purchase, books, or hostel expenses",
-      "No separate tuition fee receipt is required to claim the lump sum ₹50,000",
-      "Reserved specifically for girl students with maximum 2 girls per family"
-    ],
-    eligibilityCriteria: [
-      "Female student admitted to 1st year of Degree/Diploma course or 2nd year through lateral entry in an AICTE approved institution",
-      "Maximum two girls per family eligible",
-      "Total family annual income must not exceed ₹8 Lakh from all sources",
-      "Selection based purely on merit in the qualifying examination (10+2 / ITI / 10th)"
-    ],
-    requiredDocuments: [
-      { name: "10th & 12th/Diploma Marksheet", description: "Proof of qualifying exam merit", mandatory: true },
-      { name: "Family Income Certificate", description: "Issued by Tehsildar or authorized executive magistrate", mandatory: true },
-      { name: "AICTE Institute Admission Letter", description: "Proving seat allotment through centralized counselling", mandatory: true },
-      { name: "Study / Bonafide Certificate", description: "From AICTE approved Head of Institute on prescribed format", mandatory: true },
-      { name: "Family Declaration (Max 2 Girls)", description: "Affidavit / declaration stating not more than 2 daughters", mandatory: true },
-      { name: "Aadhaar Card & Bank Passbook", description: "Direct Bank Transfer linked account in student's name", mandatory: true }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Register on National Scholarship Portal", description: "Use your OTR ID on scholarships.gov.in under AICTE schemes.", tip: "Select 'AICTE Pragati Scheme for Girls (Degree or Diploma)'." },
-      { stepNumber: 2, title: "Select AICTE Institution & Roll No", description: "Ensure your college is AICTE recognized and matches the database list.", tip: "Confirm your AICTE permanent institute ID from the college office." },
-      { stepNumber: 3, title: "Upload Family Declaration & Income Certificate", description: "Attach the signed family declaration form.", tip: "Income certificate must be valid for the current financial year." },
-      { stepNumber: 4, title: "Submit & Track Institute Verification", description: "Submit online and hand over documents to your college AICTE coordinator.", tip: "AICTE verification has strict deadlines; check weekly." }
-    ],
-    officialPortalUrl: "https://www.aicte-india.org/schemes/students-development-schemes/Pragati",
-    portalName: "AICTE Official Portal / NSP",
-    helpline: "011-29581000 | pragati@aicte-india.org",
-    faqs: [
-      { q: "Is this scholarship renewed every year?", a: "Yes, it is renewed up to completion of the course provided the candidate passes all semester exams without backlogs." },
-      { q: "Can I apply if I joined via lateral entry?", a: "Yes, students admitted into 2nd year of Degree through lateral entry are eligible." }
-    ],
-    featured: true,
-    tags: ["Girls Only", "AICTE", "Engineering", "Technical", "Diploma", "Degree"]
-  },
-  {
-    id: "reliance-foundation-ug-pg",
-    name: "Reliance Foundation Undergraduate & Postgraduate Scholarships",
-    provider: "Reliance Foundation (CSR Initiative)",
-    badge: "CSR & Private Trust",
-    category: "Corporate & CSR",
-    amount: "Up to ₹2,00,000 (UG) / ₹6,00,000 (PG)",
-    maxAmountNumeric: 200000,
-    level: ["Undergraduate", "Postgraduate"],
-    applicableStates: "All India",
-    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
-    gender: "All",
-    incomeCeiling: 1500000,
-    incomeCeilingText: "Preference to income < ₹2.5L; Max ₹15L",
-    minMarks: 60,
-    deadline: "2026-10-31",
-    status: "Closing Soon",
-    daysLeft: 6,
-    fullScope: "India's largest private scholarship programme supporting 5,000 undergraduate and 100 postgraduate students annually across all streams of study. Beyond direct grant money, scholars gain access to leadership workshops, mentorship by industry pioneers, and an exclusive alumni community.",
-    benefits: [
-      "Undergraduate: Up to ₹2 Lakh over the duration of the degree program",
-      "Postgraduate: Up to ₹6 Lakh over the duration of the degree in select fields",
-      "Alumni mentorship network, professional development sessions, and global expert webinars",
-      "Direct fund disbursement without any lock-in or employment bond"
-    ],
-    eligibilityCriteria: [
-      "First-year full-time undergraduate students in ANY regular degree stream from a recognized Indian institute",
-      "Passed Class 12 with minimum 60% aggregate marks",
-      "Household income between ₹2.5 Lakh to ₹15 Lakh (preference given to lower income bands < ₹2.5L)",
-      "Mandatory online aptitude test conducted by Reliance Foundation"
-    ],
-    requiredDocuments: [
-      { name: "Class 10 & 12 Board Marksheets", description: "Official marksheets showing subjects and scores", mandatory: true },
-      { name: "Current College Identity Card / Admission Letter", description: "Proof of enrollment in 1st year degree", mandatory: true },
-      { name: "Family Income Proof (ITR / Salary Slip / Income Certificate)", description: "Issued by Govt authority or Form 16 / ITR of parents", mandatory: true },
-      { name: "Passport-size Photograph", description: "Clear recent photograph in JPG format", mandatory: true },
-      { name: "Disability Certificate (If applicable)", description: "From recognized government medical authority", mandatory: false }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Online Application Registration", description: "Apply directly at scholarships.reliancefoundation.org with basic academic and family details.", tip: "Double-check your email ID and mobile number." },
-      { stepNumber: 2, title: "Online Aptitude Test (60 mins)", description: "Take the mandatory proctored online test covering General Mental Ability, Numerical Ability, and Verbal Ability.", tip: "Practice logical reasoning puzzles in advance; no negative marking." },
-      { stepNumber: 3, title: "Document Verification", description: "Shortlisted candidates are invited to upload scanned verification documents.", tip: "Keep original copies handy for virtual spot verification." },
-      { stepNumber: 4, title: "Scholarship Announcement & Award", description: "Results declared in December; funds transferred in instalments directly to your bank account.", tip: "Maintain regular attendance and passing grade to renew." }
-    ],
-    officialPortalUrl: "https://www.scholarships.reliancefoundation.org",
-    portalName: "Reliance Foundation Scholarships Portal",
-    helpline: "022-79672000 | rf.scholarships@reliancefoundation.org",
-    faqs: [
-      { q: "Is this limited to STEM degrees?", a: "For Undergraduates, ALL degree streams (BA, B.Com, B.Sc, BBA, B.Tech, etc.) are eligible. For PG, specific cutting-edge technology areas are prioritized." },
-      { q: "Does this require a repayment or bond?", a: "No! It is a 100% grant, no repayment and no bond required." }
-    ],
-    featured: true,
-    tags: ["Reliance", "Private", "Undergraduate", "All Streams", "Mentorship"]
   },
   {
     id: "post-matric-sc-st-obc",
@@ -213,15 +107,395 @@ export const SCHOLARSHIPS_DATA = [
     portalName: "NSP / Respective State e-Pass Portals",
     helpline: "1800-11-2001 | helpdesk-postmatric@gov.in",
     faqs: [
-      { q: "Does the fee reimbursement go to the college or the student?", a: "In most states, the tuition fee component goes directly to the college via DBT/PFMS, while the maintenance allowance is transferred to the student's personal Aadhaar-linked bank account." },
-      { q: "Can I apply if I failed a year?", a: "Scholarship is generally not paid for repeating the same class/year twice." }
+      { q: "Does the fee reimbursement go to the college or the student?", a: "In most states, the tuition fee component goes directly to the college via DBT/PFMS, while the maintenance allowance is transferred to the student's personal Aadhaar-linked bank account." }
     ],
     featured: true,
     tags: ["SC", "ST", "OBC", "Tuition Reimbursement", "Maintenance Allowance", "NSP"]
   },
   {
+    id: "national-means-cum-merit-nmms",
+    name: "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+    provider: "Department of School Education & Literacy, Govt of India",
+    badge: "Central Govt (School)",
+    category: "School Education",
+    amount: "₹12,000 per annum (₹1,000 per month)",
+    maxAmountNumeric: 12000,
+    level: ["School"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 350000,
+    incomeCeilingText: "Less than ₹3.5 Lakh / year",
+    minMarks: 55,
+    deadline: "2026-11-15",
+    status: "Closing Soon",
+    daysLeft: 21,
+    fullScope: "To award scholarships to meritorious students of economically weaker sections to arrest their drop-out at class VIII and encourage them to continue study at secondary stage (Class 9 to Class 12). 1,00,000 scholarships are sanctioned every year across all states.",
+    benefits: [
+      "₹12,000 per year (₹1,000 per month) for 4 years from Class 9 to Class 12",
+      "Total ₹48,000 financial support to complete schooling",
+      "Direct Benefit Transfer into student's personal bank account via SBI / Public Sector banks"
+    ],
+    eligibilityCriteria: [
+      "Studying as regular student in Class 8 in a Government, Local Body or Government-aided school",
+      "Minimum 55% marks or equivalent grade in Class 7 annual exam (50% for SC/ST)",
+      "Parental income from all sources not exceeding ₹3,50,000 per annum",
+      "Must qualify the State-level NMMS Examination consisting of Mental Ability Test (MAT) & Scholastic Aptitude Test (SAT)"
+    ],
+    requiredDocuments: [
+      { name: "Class 7 Pass Marksheet", description: "Showing minimum 55% marks", mandatory: true },
+      { name: "Parental Income Certificate", description: "Issued by Tehsildar", mandatory: true },
+      { name: "NMMS Selection Merit Card", description: "Proof of passing the exam", mandatory: true },
+      { name: "Aadhaar Linked Bank Passbook", description: "Student's bank account", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Appear for State NMMS Exam in Class 8", description: "Register through school headmaster.", tip: "Practice MAT & SAT papers." },
+      { stepNumber: 2, title: "Register on NSP in Class 9", description: "Submit your NMMS credentials on scholarships.gov.in.", tip: "Select National Means-cum-Merit scheme." }
+    ],
+    officialPortalUrl: "https://scholarships.gov.in",
+    portalName: "NSP / SCERT State Portals",
+    helpline: "011-23381662 | nmms-mhrd@gov.in",
+    faqs: [
+      { q: "Can private school students apply?", a: "No, students of private un-aided schools or central residential schools (like JNV/KVS) are not eligible." }
+    ],
+    featured: false,
+    tags: ["School", "Class 9 to 12", "NMMSS", "Merit-cum-Means"]
+  },
+  {
+    id: "pre-matric-sc-scheme",
+    name: "Centrally Sponsored Pre-Matric Scholarship for SC & Vulnerable Groups",
+    provider: "Ministry of Social Justice & Empowerment, Govt of India",
+    badge: "Central Govt (School)",
+    category: "School Education",
+    amount: "₹3,500 (Day Scholar) to ₹7,000/yr (Hosteller) + Ad-hoc Grant",
+    maxAmountNumeric: 7000,
+    level: ["School"],
+    applicableStates: "All India",
+    casteEligibility: ["SC"],
+    gender: "All",
+    incomeCeiling: 250000,
+    incomeCeilingText: "Less than ₹2.5 Lakh / year",
+    minMarks: 40,
+    deadline: "2026-11-25",
+    status: "Open",
+    daysLeft: 31,
+    fullScope: "To support parents of SC children for education of their wards studying in classes 9 and 10 so that the incidence of drop-out, especially in the transition from elementary to secondary stage, is minimized.",
+    benefits: [
+      "Day Scholars: ₹3,500 per annum + ₹750 ad-hoc book grant",
+      "Hostellers: ₹7,000 per annum + ₹1,000 ad-hoc grant",
+      "Additional disability allowance of ₹240/month for students with disabilities"
+    ],
+    eligibilityCriteria: [
+      "Student must belong to Scheduled Caste (SC)",
+      "Studying in Class 9 or Class 10 in a Government or recognized private school",
+      "Parental annual income from all sources not exceeding ₹2,50,000"
+    ],
+    requiredDocuments: [
+      { name: "Caste Certificate", description: "SC certificate with digital verification code", mandatory: true },
+      { name: "Income Certificate", description: "Current financial year income certificate", mandatory: true },
+      { name: "Class 8 Pass Marksheet", description: "Showing admission to Class 9", mandatory: true },
+      { name: "Bank Passbook with Aadhaar Seeding", description: "In student's own name", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on NSP or State e-Pass Portal", description: "Complete OTR and select Pre-Matric SC Scheme.", tip: "Submit school DISE code." }
+    ],
+    officialPortalUrl: "https://scholarships.gov.in",
+    portalName: "NSP / State Social Welfare",
+    helpline: "0120-6619540",
+    faqs: [{ q: "Is this for Class 1 to 8?", a: "Under latest norms, Pre-Matric is provided for Class 9 and 10." }],
+    featured: false,
+    tags: ["School", "SC", "Pre-Matric", "Class 9-10"]
+  },
+  {
+    id: "begum-hazrat-mahal-minority-girls",
+    name: "Begum Hazrat Mahal National Scholarship for Minority Girls",
+    provider: "Maulana Azad Education Foundation, Ministry of Minority Affairs",
+    badge: "Minority Affairs (Central)",
+    category: "Minority",
+    amount: "₹10,000 to ₹12,000 per annum",
+    maxAmountNumeric: 12000,
+    level: ["School", "10+2"],
+    applicableStates: "All India",
+    casteEligibility: ["Minority"],
+    gender: "Female",
+    incomeCeiling: 200000,
+    incomeCeilingText: "Less than ₹2.0 Lakh / year",
+    minMarks: 50,
+    deadline: "2026-11-30",
+    status: "Open",
+    daysLeft: 36,
+    fullScope: "Specifically crafted to assist meritorious girl students belonging to six notified minority communities (Muslims, Christians, Sikhs, Buddhists, Jains, and Parsis) studying in Class 9, 10, 11, and 12.",
+    benefits: [
+      "Class 9 & 10: ₹10,000 per annum in two installments",
+      "Class 11 & 12: ₹12,000 per annum in two installments",
+      "Direct DBT transfer to girl student's Aadhaar-linked bank account"
+    ],
+    eligibilityCriteria: [
+      "Only for girl students belonging to notified minority communities",
+      "Studying in Class 9 to Class 12 in recognized schools/institutions",
+      "Secured minimum 50% marks in previous annual exam",
+      "Annual family income not exceeding ₹2,00,000"
+    ],
+    requiredDocuments: [
+      { name: "School Verification Form", description: "Signed & stamped by school Principal", mandatory: true },
+      { name: "Self-declaration of Minority Community", description: "Notarized or parent signed declaration", mandatory: true },
+      { name: "Income Certificate", description: "Tehsildar issued certificate", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on NSP", description: "Apply online at scholarships.gov.in under Ministry of Minority Affairs.", tip: "Keep minority declaration ready." }
+    ],
+    officialPortalUrl: "https://scholarships.gov.in",
+    portalName: "National Scholarship Portal",
+    helpline: "011-23583788 | scholarship-maef@nic.in",
+    faqs: [{ q: "Can two sisters apply?", a: "Yes, up to two girls from the same family can avail this." }],
+    featured: false,
+    tags: ["Minority", "Girls Only", "School", "Class 9-12"]
+  },
+
+  // ==========================================
+  // 2. AICTE TECHNICAL SCHEMES
+  // ==========================================
+  {
+    id: "aicte-pragati-girls",
+    name: "AICTE Pragati Scholarship Scheme for Girl Students (Degree & Diploma)",
+    provider: "All India Council for Technical Education (AICTE)",
+    badge: "AICTE Technical",
+    category: "Girls Only",
+    amount: "₹50,000 per annum + Laptop / Study Grant",
+    maxAmountNumeric: 50000,
+    level: ["Undergraduate", "Diploma/ITI"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "Female",
+    incomeCeiling: 800000,
+    incomeCeilingText: "Less than ₹8.0 Lakh / year",
+    minMarks: 50,
+    deadline: "2026-11-15",
+    status: "Closing Soon",
+    daysLeft: 21,
+    fullScope: "A landmark initiative aimed at empowering female students to pursue technical education. AICTE awards 10,000 scholarships each year (5,000 for Degree and 5,000 for Diploma) covering college tuition fees, purchase of laptop/computer, software, books, and competitive exam fees.",
+    benefits: [
+      "₹50,000 lump sum per annum for every year of study (up to 4 years for Degree, 3 years for Diploma)",
+      "Can be utilized towards tuition fee payment, laptop purchase, books, or hostel expenses",
+      "No separate tuition fee receipt is required to claim the lump sum ₹50,000",
+      "Reserved specifically for girl students with maximum 2 girls per family"
+    ],
+    eligibilityCriteria: [
+      "Female student admitted to 1st year of Degree/Diploma course or 2nd year through lateral entry in an AICTE approved institution",
+      "Maximum two girls per family eligible",
+      "Total family annual income must not exceed ₹8 Lakh from all sources",
+      "Selection based purely on merit in the qualifying examination"
+    ],
+    requiredDocuments: [
+      { name: "10th & 12th/Diploma Marksheet", description: "Proof of qualifying exam merit", mandatory: true },
+      { name: "Family Income Certificate", description: "Issued by Tehsildar or authorized executive magistrate", mandatory: true },
+      { name: "AICTE Institute Admission Letter", description: "Proving seat allotment through centralized counselling", mandatory: true },
+      { name: "Family Declaration (Max 2 Girls)", description: "Affidavit / declaration stating not more than 2 daughters", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on National Scholarship Portal", description: "Use your OTR ID on scholarships.gov.in under AICTE schemes.", tip: "Select 'AICTE Pragati Scheme for Girls'." },
+      { stepNumber: 2, title: "Upload Family Declaration & Income Certificate", description: "Attach the signed family declaration form.", tip: "Income certificate must be valid for the current FY." }
+    ],
+    officialPortalUrl: "https://www.aicte-india.org/schemes/students-development-schemes/Pragati",
+    portalName: "AICTE Official Portal / NSP",
+    helpline: "011-29581000 | pragati@aicte-india.org",
+    faqs: [
+      { q: "Is this scholarship renewed every year?", a: "Yes, it is renewed up to completion of the course provided the candidate passes all semester exams without backlogs." }
+    ],
+    featured: true,
+    tags: ["Girls Only", "AICTE", "Engineering", "Technical", "Diploma", "Degree"]
+  },
+  {
+    id: "aicte-saksham-differently-abled",
+    name: "AICTE Saksham Scholarship Scheme for Specially-Abled Students",
+    provider: "All India Council for Technical Education (AICTE)",
+    badge: "AICTE Specially-Abled",
+    category: "Differently Abled",
+    amount: "₹50,000 per annum + Assistive Tech Support",
+    maxAmountNumeric: 50000,
+    level: ["Undergraduate", "Diploma/ITI"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 800000,
+    incomeCeilingText: "Less than ₹8.0 Lakh / year",
+    minMarks: 40,
+    deadline: "2026-11-25",
+    status: "Open",
+    daysLeft: 31,
+    fullScope: "Dedicated to encouraging and supporting differently-abled students to achieve technical education. AICTE offers all eligible specially-abled students with disability not less than 40% a direct financial assistance of ₹50,000 every year of their degree or diploma.",
+    benefits: [
+      "₹50,000 per annum for every year of technical degree/diploma program",
+      "Can be used for purchase of screen-readers, braille devices, wheelchairs, hearing aids, laptops, and college fees",
+      "All eligible applicants meeting minimum criteria are sanctioned (no cap on numbers)"
+    ],
+    eligibilityCriteria: [
+      "Specially-abled student having disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma course in an AICTE approved institution (or 2nd year through lateral entry)",
+      "Family income from all sources should not exceed ₹8 Lakh per annum"
+    ],
+    requiredDocuments: [
+      { name: "Unique Disability ID (UDID) / Disability Certificate", description: "Issued by competent medical board showing >= 40% disability", mandatory: true },
+      { name: "AICTE Admission Proof", description: "Allotment letter through centralized admission process", mandatory: true },
+      { name: "Income Certificate", description: "Issued by Revenue Officer not below Tehsildar rank", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Create OTR on NSP", description: "Select AICTE Saksham Scheme.", tip: "Ensure your UDID card is verified." }
+    ],
+    officialPortalUrl: "https://www.aicte-india.org/schemes/students-development-schemes/Saksham",
+    portalName: "NSP / AICTE Portal",
+    helpline: "011-29581000 | saksham@aicte-india.org",
+    faqs: [{ q: "Is there a merit cutoff?", a: "No, all eligible applicants with valid admission and >=40% disability are awarded." }],
+    featured: false,
+    tags: ["PwD", "Differently Abled", "AICTE", "Engineering", "Diploma"]
+  },
+  {
+    id: "aicte-swanath-scheme",
+    name: "AICTE Swanath Scholarship Scheme (Orphans, Wards of Martyrs & COVID-Affected)",
+    provider: "All India Council for Technical Education (AICTE)",
+    badge: "AICTE Swanath",
+    category: "Government Central",
+    amount: "₹50,000 per annum",
+    maxAmountNumeric: 50000,
+    level: ["Undergraduate", "Diploma/ITI"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 800000,
+    incomeCeilingText: "Less than ₹8.0 Lakh / year (No income limit for Orphans)",
+    minMarks: 40,
+    deadline: "2026-11-30",
+    status: "Open",
+    daysLeft: 36,
+    fullScope: "To provide financial support to orphaned children, children of parents who died due to COVID-19, and wards of Armed Forces and Central Paramilitary Forces personnel martyred in action.",
+    benefits: [
+      "₹50,000 per annum lump sum for all years of Degree (4 years) or Diploma (3 years)",
+      "Zero competition cutoff: 2,000 scholarships awarded annually on direct verification",
+      "Direct Benefit Transfer to student's verified bank account"
+    ],
+    eligibilityCriteria: [
+      "Student must be an Orphan, OR child of both parents deceased due to COVID-19, OR ward of Armed Forces/Police Martyrs",
+      "Admitted to regular Degree/Diploma course in an AICTE recognized institution",
+      "Family income not exceeding ₹8 Lakh per annum (waived for total orphans)"
+    ],
+    requiredDocuments: [
+      { name: "Death Certificate of Parents / Orphan Certificate", description: "Issued by Tehsildar or SDM", mandatory: true },
+      { name: "Armed Forces Martyr Certificate (if applicable)", description: "Issued by competent defense authority", mandatory: false },
+      { name: "College Admission Letter", description: "Proving AICTE enrollment", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on NSP Portal", description: "Choose AICTE Swanath Scheme and upload verification certificates.", tip: "Submit hard copy to college INO." }
+    ],
+    officialPortalUrl: "https://www.aicte-india.org/schemes/students-development-schemes/Swanath",
+    portalName: "NSP / AICTE Portal",
+    helpline: "011-29581000",
+    faqs: [{ q: "Can diploma students apply?", a: "Yes, both Degree and Diploma students are eligible." }],
+    featured: false,
+    tags: ["Orphans", "Martyrs Wards", "COVID Support", "AICTE", "Engineering"]
+  },
+
+  // ==========================================
+  // 3. DEFENSE & POLICE WARDS
+  // ==========================================
+  {
+    id: "pmss-warb-capfs-assam-rifles",
+    name: "Prime Minister's Scholarship Scheme (PMSS) for CAPFs & Assam Rifles",
+    provider: "Welfare & Rehabilitation Board (WARB), Ministry of Home Affairs",
+    badge: "MHA Defense Welfare",
+    category: "Government Central",
+    amount: "₹3,000/month (Girls) & ₹2,500/month (Boys)",
+    maxAmountNumeric: 36000,
+    level: ["Undergraduate", "Postgraduate"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: null,
+    incomeCeilingText: "No income bar (Order of Merit & Martyr Category Priority)",
+    minMarks: 60,
+    deadline: "2026-12-10",
+    status: "Open",
+    daysLeft: 46,
+    fullScope: "To encourage higher technical and professional education for dependent wards and widows of Central Armed Police Forces (BSF, CRPF, CISF, ITBP, SSB) & Assam Rifles personnel martyred or disabled in the line of duty.",
+    benefits: [
+      "Girls: ₹36,000 per annum (₹3,000 per month)",
+      "Boys: ₹30,000 per annum (₹2,500 per month)",
+      "Paid for the entire course duration (up to 5 years for MBBS/B.Tech)",
+      "Direct credit through PFMS into student's personal bank account"
+    ],
+    eligibilityCriteria: [
+      "Dependent ward or widow of serving/retired/martyred CAPF & Assam Rifles personnel",
+      "Pursuing first professional degree (B.Tech, MBBS, BDS, B.Pharm, B.Sc Nursing, BBA, BCA, MCA)",
+      "Minimum 60% marks in Class 12 / Diploma / Graduation for entry"
+    ],
+    requiredDocuments: [
+      { name: "Serving / Discharge Certificate of Parent", description: "Issued by Head of Office / Battalion Commandant", mandatory: true },
+      { name: "PPO Copy / Gallantry Award Certificate (if applicable)", description: "Priority category proof", mandatory: false },
+      { name: "Class 12 / Degree Marksheet", description: "Minimum 60% marks", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on NSP under WARB schemes", description: "Select Prime Minister Scholarship Scheme for Central Armed Police Forces.", tip: "Enter parent's Force PPO/Force Number." }
+    ],
+    officialPortalUrl: "https://scholarships.gov.in",
+    portalName: "National Scholarship Portal / WARB",
+    helpline: "011-23063111 | warb-mha@nic.in",
+    faqs: [{ q: "Are distance learning degrees eligible?", a: "No, only regular recognized full-time professional degrees are eligible." }],
+    featured: true,
+    tags: ["Defense", "Police", "CRPF", "BSF", "ITBP", "CISF", "Martyrs Wards"]
+  },
+
+  // ==========================================
+  // 4. PRESTIGIOUS CSR & PRIVATE FOUNDATIONS
+  // ==========================================
+  {
+    id: "reliance-foundation-ug-pg",
+    name: "Reliance Foundation Undergraduate & Postgraduate Scholarships",
+    provider: "Reliance Foundation (CSR Initiative)",
+    badge: "CSR & Private Trust",
+    category: "Corporate & CSR",
+    amount: "Up to ₹2,00,000 (UG) / ₹6,00,000 (PG)",
+    maxAmountNumeric: 200000,
+    level: ["Undergraduate", "Postgraduate"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 1500000,
+    incomeCeilingText: "Preference to income < ₹2.5L; Max ₹15L",
+    minMarks: 60,
+    deadline: "2026-10-31",
+    status: "Closing Soon",
+    daysLeft: 6,
+    fullScope: "India's largest private scholarship programme supporting 5,000 undergraduate and 100 postgraduate students annually across all streams of study. Beyond direct grant money, scholars gain access to leadership workshops, mentorship by industry pioneers, and an exclusive alumni community.",
+    benefits: [
+      "Undergraduate: Up to ₹2 Lakh over the duration of the degree program",
+      "Postgraduate: Up to ₹6 Lakh over the duration of the degree in select fields",
+      "Alumni mentorship network, professional development sessions, and global expert webinars",
+      "Direct fund disbursement without any lock-in or employment bond"
+    ],
+    eligibilityCriteria: [
+      "First-year full-time undergraduate students in ANY regular degree stream from a recognized Indian institute",
+      "Passed Class 12 with minimum 60% aggregate marks",
+      "Household income between ₹2.5 Lakh to ₹15 Lakh (preference given to lower income bands < ₹2.5L)",
+      "Mandatory online aptitude test conducted by Reliance Foundation"
+    ],
+    requiredDocuments: [
+      { name: "Class 10 & 12 Board Marksheets", description: "Official marksheets showing subjects and scores", mandatory: true },
+      { name: "Current College Identity Card / Admission Letter", description: "Proof of enrollment in 1st year degree", mandatory: true },
+      { name: "Family Income Proof (ITR / Salary Slip / Income Certificate)", description: "Issued by Govt authority or Form 16 / ITR of parents", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Online Application Registration", description: "Apply directly at scholarships.reliancefoundation.org with basic academic and family details.", tip: "Double-check your email ID." },
+      { stepNumber: 2, title: "Online Aptitude Test (60 mins)", description: "Take the mandatory proctored online test covering General Mental Ability and Verbal reasoning.", tip: "Practice logical puzzles in advance." }
+    ],
+    officialPortalUrl: "https://www.scholarships.reliancefoundation.org",
+    portalName: "Reliance Foundation Scholarships Portal",
+    helpline: "022-79672000 | rf.scholarships@reliancefoundation.org",
+    faqs: [{ q: "Is this limited to STEM degrees?", a: "For Undergraduates, ALL degree streams (BA, B.Com, B.Sc, BBA, B.Tech, etc.) are eligible." }],
+    featured: true,
+    tags: ["Reliance", "Private", "Undergraduate", "All Streams", "Mentorship"]
+  },
+  {
     id: "kotak-kanya-scholarship",
-    name: "Kotak Kanya Scholarship for Meritorious Girls",
+    name: "Kotak Kanya Scholarship for Meritorious Girls in Professional Degrees",
     provider: "Kotak Education Foundation & Kotak Mahindra Group (CSR)",
     badge: "CSR - Kotak Foundation",
     category: "Girls Only",
@@ -237,39 +511,29 @@ export const SCHOLARSHIPS_DATA = [
     deadline: "2026-11-20",
     status: "Open",
     daysLeft: 26,
-    fullScope: "Financial assistance for meritorious girl students from disadvantaged backgrounds to pursue professional graduation degree courses from recognized institutes (such as Engineering, MBBS, Architecture, Design, Integrated LLB). Covers tuition, hostel, academic materials, and laptops.",
+    fullScope: "Financial assistance for meritorious girl students from disadvantaged backgrounds to pursue professional graduation degree courses (Engineering, MBBS, Architecture, Design, Integrated LLB). Covers tuition, hostel, academic materials, and laptops.",
     benefits: [
       "₹1,50,000 per year until the completion of professional graduation course (up to 4 to 5 years)",
       "Total grant up to ₹6 Lakh to ₹7.5 Lakh per girl scholar",
-      "Mentorship, life skills training, English communication enhancement, and career guidance",
-      "Holistic development support from Kotak Education Foundation"
+      "Mentorship, life skills training, English communication enhancement, and career guidance"
     ],
     eligibilityCriteria: [
-      "Meritorious girl students who have secured admission to 1st year of professional graduation courses (Engineering, Medical, Law, Architecture)",
+      "Meritorious girl students who have secured admission to 1st year of professional graduation courses",
       "Scored 75% or above marks in Class 12 Board examinations",
-      "Annual family income must not exceed ₹6,00,000 from all sources",
-      "Children of employees of Kotak Mahindra Group & Buddy4Study are not eligible"
+      "Annual family income must not exceed ₹6,00,000 from all sources"
     ],
     requiredDocuments: [
       { name: "Class 12 Marksheet", description: "Showing minimum 75% marks", mandatory: true },
       { name: "Entrance Exam Scorecard & Allotment Letter", description: "JEE, NEET, CLAT, CET allotment letter", mandatory: true },
-      { name: "College Fee Structure", description: "Official college quotation or receipt of 1st year fees", mandatory: true },
-      { name: "Income Certificate / ITR / BPL Card", description: "Issued by Tehsildar or Form 16 / ITR", mandatory: true },
-      { name: "Aadhaar Card", description: "Front and back clear copy", mandatory: true }
+      { name: "College Fee Structure", description: "Official college quotation or receipt of 1st year fees", mandatory: true }
     ],
     applicationSteps: [
-      { stepNumber: 1, title: "Register on Kotak CSR Portal / Buddy4Study", description: "Create student login and choose Kotak Kanya Scholarship application form.", tip: "Provide an active email that you check daily." },
-      { stepNumber: 2, title: "Upload Admission Documents & Proof of Fees", description: "Upload Class 12 marksheet, entrance rank card, and admission receipt.", tip: "Make sure all PDFs are legible." },
-      { stepNumber: 3, title: "Telephone & Video Interview", description: "Shortlisted candidates undergo a brief virtual interview assessing drive and financial need.", tip: "Speak honestly about your academic goals and family background." },
-      { stepNumber: 4, title: "Final Selection & Fund Release", description: "Funds disbursed directly to the college or student account for academic fees.", tip: "Renewal requires minimum 6.0 CGPA each semester." }
+      { stepNumber: 1, title: "Register on Kotak CSR Portal", description: "Fill application on the designated scholarship portal.", tip: "Provide active email." }
     ],
     officialPortalUrl: "https://kotakeducation.org/kotak-kanya-scholarship",
     portalName: "Kotak Education Foundation",
     helpline: "011-43092248 | kotakkanya@buddy4study.com",
-    faqs: [
-      { q: "Is this scholarship only for girls?", a: "Yes, this program is exclusively designed to empower young women pursuing professional higher education." },
-      { q: "What courses are considered professional?", a: "B.Tech, B.E, MBBS, BDS, B.Arch, Integrated 5-year B.A. LL.B / B.B.A. LL.B, B.Pharm, etc." }
-    ],
+    faqs: [{ q: "What courses are considered professional?", a: "B.Tech, B.E, MBBS, BDS, B.Arch, Integrated 5-year B.A. LL.B, B.Pharm, etc." }],
     featured: true,
     tags: ["Girls Only", "Professional Courses", "B.Tech", "MBBS", "Law", "Kotak"]
   },
@@ -295,89 +559,527 @@ export const SCHOLARSHIPS_DATA = [
     benefits: [
       "Direct tuition fee waiver ranging from 30% to 80% of approved college fees",
       "Award amount up to ₹1,00,000 per academic year directly paid to college or student",
-      "Special consideration for students from rural districts and low-income families",
-      "Prestigious recognition as a Tata Scholar"
+      "Special consideration for students from rural districts and low-income families"
     ],
     eligibilityCriteria: [
-      "Undergraduate and Postgraduate students pursuing recognized healthcare/medical degrees (MBBS, BDS, B.Sc Nursing, B.Pharm, etc.)",
+      "Undergraduate and Postgraduate students pursuing recognized healthcare/medical degrees",
       "Minimum 65% marks in qualifying academic examination",
-      "Enrolled in 2nd year onwards (some 1st year seats open based on NEET rank)",
       "Total family annual income strictly below ₹6 Lakh"
     ],
     requiredDocuments: [
-      { name: "Academic Marksheets of Previous Years", description: "Attested marksheets of all passed university semesters/years", mandatory: true },
-      { name: "Original College Fee Receipt", description: "Paid receipt for the current academic session", mandatory: true },
-      { name: "Income Certificate of Parents", description: "ITR or Tahsildar issued certificate", mandatory: true },
-      { name: "Statement of Purpose (SoP)", description: "300-word essay on why you chose healthcare and financial need", mandatory: true },
-      { name: "Bank Account Details & Cancelled Cheque", description: "Showing student's IFSC and account number", mandatory: true }
+      { name: "Academic Marksheets of Previous Years", description: "Attested marksheets of all semesters", mandatory: true },
+      { name: "Original College Fee Receipt", description: "Paid receipt for the current academic session", mandatory: true }
     ],
     applicationSteps: [
-      { stepNumber: 1, title: "Register on Tata Trusts Grants Portal", description: "Visit igp.tatatrusts.org and fill out the applicant profile.", tip: "Keep your NEET scorecard and semester marksheets ready." },
-      { stepNumber: 2, title: "Upload Course & Fee Documents", description: "Submit verified fee break-up from your medical college finance office.", tip: "Ensure the hostel fee is segregated from the tuition fee." },
-      { stepNumber: 3, title: "Review & Telephonic Verification", description: "Tata Trusts review panel conducts document verification and background check.", tip: "Answer phone calls from Tata Trusts representatives promptly." },
-      { stepNumber: 4, title: "Sanction Letter & Disbursement", description: "Sanction letter emailed and grant credited directly via RTGS/NEFT.", tip: "Send receipt acknowledgment back to Tata Trusts." }
+      { stepNumber: 1, title: "Register on Tata Trusts Grants Portal", description: "Visit igp.tatatrusts.org.", tip: "Keep NEET scorecard ready." }
     ],
     officialPortalUrl: "https://www.tatatrusts.org/our-work/individual-grants-programme/education-grants",
     portalName: "Tata Trusts Individual Grants",
     helpline: "022-66658282 | igp@tatatrusts.org",
-    faqs: [
-      { q: "Is this an open grant or loan?", a: "This is a non-repayable gift grant, not a loan scholarship." },
-      { q: "Are dental and ayurvedic students eligible?", a: "Yes, BDS, BAMS, BHMS, and Physiotherapy students are eligible." }
-    ],
+    faqs: [{ q: "Are dental and ayurvedic students eligible?", a: "Yes, BDS, BAMS, BHMS, and Physiotherapy students are eligible." }],
     featured: false,
-    tags: ["Tata Trusts", "Medical", "MBBS", "Nursing", "Healthcare", "Undergraduate"]
+    tags: ["Tata Trusts", "Medical", "MBBS", "Nursing", "Healthcare"]
   },
   {
-    id: "aicte-saksham-differently-abled",
-    name: "AICTE Saksham Scholarship Scheme for Specially-Abled Students",
-    provider: "All India Council for Technical Education (AICTE)",
-    badge: "AICTE Specially-Abled",
-    category: "Differently Abled",
-    amount: "₹50,000 per annum + Assistive Tech Support",
-    maxAmountNumeric: 50000,
-    level: ["Undergraduate", "Diploma/ITI"],
+    id: "siemens-scholarship-program",
+    name: "Siemens Scholarship Program for Engineering Students",
+    provider: "Siemens India Corporate Social Responsibility",
+    badge: "German Engineering CSR",
+    category: "Corporate & CSR",
+    amount: "100% Tuition Fees + Laptop + Books + Paid Internship",
+    maxAmountNumeric: 120000,
+    level: ["Undergraduate"],
     applicableStates: "All India",
     casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
     gender: "All",
-    incomeCeiling: 800000,
-    incomeCeilingText: "Less than ₹8.0 Lakh / year",
+    incomeCeiling: 200000,
+    incomeCeilingText: "Less than ₹2.0 Lakh / year (Exclusively for underprivileged)",
+    minMarks: 60,
+    deadline: "2026-11-20",
+    status: "Open",
+    daysLeft: 26,
+    fullScope: "A prestigious 4-year holistic development program for 1st year engineering students from government engineering colleges across India. Covers full college tuition, allowances, cutting-edge soft-skills training, and potential placement in Siemens.",
+    benefits: [
+      "100% tuition and institutional fee reimbursement for 4 years of B.Tech / B.E.",
+      "Annual allowance for purchase of books, stationery, and hostel expenses",
+      "Free brand-new laptop for engineering projects and coding",
+      "Internship opportunities at Siemens factories and R&D centers across India"
+    ],
+    eligibilityCriteria: [
+      "1st year students enrolled in Government Engineering Colleges in Mechanical, Electrical, Electronics, Instrumentation, IT, or Computer Science",
+      "Passed Class 10 with >= 60% and Class 12 with >= 50% aggregate (with 60% in PCM)",
+      "Annual family income strictly below ₹2,00,000",
+      "Age not more than 20 years at the time of admission"
+    ],
+    requiredDocuments: [
+      { name: "Government College Admission Letter", description: "Proving admission in Govt Engineering College", mandatory: true },
+      { name: "Parent Income Certificate", description: "Income under ₹2 Lakh per annum", mandatory: true },
+      { name: "Class 10 & 12 Marksheets", description: "PCM marks verification", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on Siemens CSR Portal", description: "Visit siemens.co.in/scholarship and fill basic engineering details.", tip: "Only Government college students qualify." }
+    ],
+    officialPortalUrl: "https://www.siemens.co.in/en/home/company/sustainability/corporate-citizenship/siemens-scholarship-program.html",
+    portalName: "Siemens India CSR Portal",
+    helpline: "022-39677000 | scholarship.in@siemens.com",
+    faqs: [{ q: "Are private college students eligible?", a: "No, this program is exclusively designed for students in Government Engineering Colleges." }],
+    featured: true,
+    tags: ["Engineering", "Siemens", "Full Fee Waiver", "Laptop Included", "B.Tech"]
+  },
+  {
+    id: "hdfc-badhte-kadam",
+    name: "HDFC Bank Parivartan's Badhte Kadam Scholarship",
+    provider: "HDFC Bank (CSR Parivartan)",
+    badge: "CSR - HDFC Bank",
+    category: "Corporate & CSR",
+    amount: "₹18,000 to ₹1,00,000 per annum",
+    maxAmountNumeric: 100000,
+    level: ["School", "10+2", "Undergraduate", "Postgraduate", "Diploma/ITI"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 600000,
+    incomeCeilingText: "Less than ₹6.0 Lakh / year (Special priority to COVID/crisis affected)",
+    minMarks: 60,
+    deadline: "2026-11-05",
+    status: "Closing Soon",
+    daysLeft: 11,
+    fullScope: "Supports students going through severe personal or financial crises (such as loss of breadwinning parent or critical illness). Enables students from Class 11 up to Post-graduation to continue education without dropping out.",
+    benefits: [
+      "School (Class 11 & 12): ₹18,000 per year",
+      "General Undergraduate Degree: ₹30,000 per year",
+      "Professional Degree (Engineering, Medical, Law): ₹1,00,000 per year"
+    ],
+    eligibilityCriteria: [
+      "Open for Indian students pursuing Class 11, 12, Diploma, ITI, Undergraduate, or Postgraduate degrees",
+      "Must have scored at least 60% marks in previous qualifying exam",
+      "Annual family income must not exceed ₹6,00,000 from all sources"
+    ],
+    requiredDocuments: [
+      { name: "Previous Academic Marksheet", description: "Class 10/12/Semester marksheet", mandatory: true },
+      { name: "Proof of Admission & Fee Receipt", description: "Current year proof", mandatory: true },
+      { name: "Proof of Family Income / Crisis", description: "Income Certificate or death certificate of parent", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Apply Online via HDFC Parivartan Desk", description: "Fill application on the designated scholarship portal.", tip: "Mention any hardship clearly." }
+    ],
+    officialPortalUrl: "https://www.hdfcbank.com/personal/about-us/corporate-social-responsibility/parivartan",
+    portalName: "HDFC Parivartan / Partner Portal",
+    helpline: "011-43092248 | badhtekadam@buddy4study.com",
+    faqs: [{ q: "Are general category students eligible?", a: "Yes, open to students of all castes based on merit and financial need." }],
+    featured: false,
+    tags: ["HDFC Bank", "Parivartan", "Crisis Support", "All Streams"]
+  },
+  {
+    id: "lic-golden-jubilee-scholarship",
+    name: "LIC Golden Jubilee Scholarship Scheme",
+    provider: "Life Insurance Corporation of India (LIC Golden Jubilee Foundation)",
+    badge: "PSU Foundation",
+    category: "Corporate & CSR",
+    amount: "₹20,000 to ₹40,000 per annum",
+    maxAmountNumeric: 40000,
+    level: ["10+2", "Diploma/ITI", "Undergraduate"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 250000,
+    incomeCeilingText: "Less than ₹2.5 Lakh / year",
+    minMarks: 60,
+    deadline: "2026-11-22",
+    status: "Open",
+    daysLeft: 28,
+    fullScope: "To provide scholarships to economically weaker students to enable them to pursue higher studies in medicine, engineering, graduation in any discipline, diploma courses, and vocational courses through ITI.",
+    benefits: [
+      "Medical Students: ₹40,000 per annum (in 3 installments)",
+      "Engineering Students: ₹30,000 per annum",
+      "General Graduation / Diploma: ₹20,000 per annum",
+      "Special Girls Scholarship: ₹15,000 per annum for 10+2"
+    ],
+    eligibilityCriteria: [
+      "Passed Class 10 or 12 examination with at least 60% marks",
+      "Enrolled in 1st year of Medical, Engineering, Degree, Diploma, or ITI course",
+      "Annual family income not exceeding ₹2,50,000 per annum"
+    ],
+    requiredDocuments: [
+      { name: "Class 10 / 12 Marksheet", description: "Minimum 60% marks", mandatory: true },
+      { name: "Income Certificate of Parents", description: "Issued by revenue department", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Online Application on LIC India Portal", description: "Navigate to licindia.in and select Golden Jubilee Scholarship.", tip: "Choose nearest LIC Division." }
+    ],
+    officialPortalUrl: "https://licindia.in/web/guest/golden-jubilee-scholarship-scheme",
+    portalName: "LIC Official Portal",
+    helpline: "022-68276827 | co_gjf@licindia.com",
+    faqs: [{ q: "Can ITI students apply?", a: "Yes, students pursuing 2-year ITI courses after Class 10 are eligible." }],
+    featured: false,
+    tags: ["LIC", "PSU", "Medical", "Engineering", "Diploma", "ITI"]
+  },
+  {
+    id: "vidyadhan-scholarship-sdf",
+    name: "Vidyadhan Scholarship Program (Sarojini Damodaran Foundation)",
+    provider: "Sarojini Damodaran Foundation (Infosys Co-founder Initiative)",
+    badge: "Foundation Grant",
+    category: "Corporate & CSR",
+    amount: "₹10,000 to ₹60,000 per annum (10+2 through Degree)",
+    maxAmountNumeric: 60000,
+    level: ["10+2", "Undergraduate"],
+    applicableStates: "All India",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 200000,
+    incomeCeilingText: "Less than ₹2.0 Lakh / year",
+    minMarks: 90,
+    deadline: "2026-11-28",
+    status: "Open",
+    daysLeft: 34,
+    fullScope: "Sponsored by Shibulal (Co-founder Infosys) & Kumari Shibulal. Supports students from underprivileged families who scored 90%+ in Class 10. Once selected, scholars are sponsored for 2 years of 10+2 (₹10,000/yr) and then continuously through their entire degree (up to ₹60,000/yr).",
+    benefits: [
+      "₹10,000 per year for Class 11 and Class 12",
+      "₹15,000 to ₹60,000 per year for Undergraduate degree (Medical, Engg, Degree)",
+      "Mentorship and leadership development programs conducted by industry mentors"
+    ],
+    eligibilityCriteria: [
+      "Passed Class 10 (SSLC/CBSE/ICSE) with at least 90% marks (75% for PwD)",
+      "Annual family income strictly less than ₹2 Lakh per annum",
+      "Selection involves online test and in-person/video interview"
+    ],
+    requiredDocuments: [
+      { name: "10th Marksheet", description: "Showing 90%+ marks", mandatory: true },
+      { name: "Income Certificate", description: "From Tahsildar / Revenue Authority", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on vidyadhan.org", description: "Submit application with 10th score and income proof.", tip: "State selection opens in phased windows." }
+    ],
+    officialPortalUrl: "https://www.vidyadhan.org",
+    portalName: "Vidyadhan Foundation Portal",
+    helpline: "080-26610055 | vidyadhan.helpdesk@sdfoundationindia.com",
+    faqs: [{ q: "Does this continue for engineering or MBBS?", a: "Yes, selected students get continued degree sponsorship." }],
+    featured: false,
+    tags: ["Vidyadhan", "Infosys", "10+2", "Degree", "Undergraduate"]
+  },
+
+  // ==========================================
+  // 5. STATE GOVERNMENT FLAGSHIP SCHEMES
+  // ==========================================
+  {
+    id: "karnataka-ssp-post-matric",
+    name: "Karnataka State Scholarship Portal (SSP) Post-Matric Scheme & Vidyasiri",
+    provider: "Social Welfare / Backward Classes Welfare Dept, Govt of Karnataka",
+    badge: "State Govt (Karnataka)",
+    category: "State Government",
+    amount: "100% Fee Reimbursement + Vidyasiri ₹1,500/month",
+    maxAmountNumeric: 60000,
+    level: ["10+2", "Diploma/ITI", "Undergraduate", "Postgraduate"],
+    applicableStates: "Karnataka",
+    casteEligibility: ["SC", "ST", "OBC", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 250000,
+    incomeCeilingText: "SC/ST: < ₹2.5L; OBC/Minority: < ₹1.0L to ₹2.5L",
     minMarks: 40,
+    deadline: "2026-11-28",
+    status: "Open",
+    daysLeft: 34,
+    fullScope: "Karnataka's unified portal providing fee reimbursement, Vidyasiri food and accommodation scheme, and maintenance allowance to all eligible students residing in Karnataka and pursuing PU, Diploma, Degree, Engineering, or PG courses.",
+    benefits: [
+      "Complete tuition fee waiver directly disbursed to colleges under state regulatory fees",
+      "Vidyasiri monthly stipend of ₹1,500/month for food and accommodation for non-hostellers",
+      "Automated e-Attestation system eliminates physical queueing at government offices"
+    ],
+    eligibilityCriteria: [
+      "Domicile of Karnataka State with valid RD certificate number",
+      "Belonging to SC, ST, OBC (Category 1, 2A, 2B, 3A, 3B), or Minority communities",
+      "Annual income within limits (SC/ST: up to ₹2.5L; OBC Cat-1: ₹2.5L; 2A/2B/3A/3B: ₹1L)"
+    ],
+    requiredDocuments: [
+      { name: "Caste & Income RD Number (15-digit)", description: "Obtained from Nadakacheri portal", mandatory: true },
+      { name: "Student Aadhaar & Ration Card Number", description: "Food & Civil Supplies verified card", mandatory: true },
+      { name: "Fee Receipt with E-Attestation Number", description: "Uploaded to e-Attestation portal", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Create SSP Student Account", description: "Register on ssp.postmatric.karnataka.gov.in using Aadhaar.", tip: "Ensure mobile receives OTP." },
+      { stepNumber: 2, title: "Fetch Caste & Income using RD Number", description: "Enter 15-digit RD number for auto-fetch.", tip: "Name on RD must match Aadhaar." }
+    ],
+    officialPortalUrl: "https://ssp.postmatric.karnataka.gov.in",
+    portalName: "Karnataka SSP Portal",
+    helpline: "080-35254757 | ssp.helpdesk@karnataka.gov.in",
+    faqs: [{ q: "What is e-Attestation in Karnataka SSP?", a: "Online system where designated taluk officers verify your fee receipt and bonafide before final submission." }],
+    featured: true,
+    tags: ["Karnataka", "SSP", "Vidyasiri", "Fee Reimbursement", "State Portal"]
+  },
+  {
+    id: "karnataka-cm-raita-vidyanidhi",
+    name: "Karnataka CM Raita Vidyanidhi Scholarship for Farmers' Children",
+    provider: "Department of Agriculture, Govt of Karnataka",
+    badge: "State Govt (Karnataka)",
+    category: "State Government",
+    amount: "₹2,000 to ₹11,000 per annum",
+    maxAmountNumeric: 11000,
+    level: ["10+2", "Diploma/ITI", "Undergraduate", "Postgraduate"],
+    applicableStates: "Karnataka",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: null,
+    incomeCeilingText: "No income bar (Parent must possess Farmer FID / RTC land record)",
+    minMarks: 40,
+    deadline: "2026-12-31",
+    status: "Upcoming",
+    daysLeft: 67,
+    fullScope: "First-of-its-kind scheme by Govt of Karnataka to encourage the children of farmers to pursue higher education. Deposited directly to students via DBT through SSP portal based on the parent's Farmer Identification (FID) number in FRUITS portal.",
+    benefits: [
+      "Boys (PU/ITI/Diploma): ₹2,500/yr | Girls: ₹3,000/yr",
+      "Boys (BA/B.Sc/B.Com/BBA): ₹5,000/yr | Girls: ₹5,500/yr",
+      "Boys (LLB/B.Ed/Paramedical): ₹7,500/yr | Girls: ₹8,000/yr",
+      "Boys (MBBS/B.Tech/PG): ₹10,000/yr | Girls: ₹11,000/yr"
+    ],
+    eligibilityCriteria: [
+      "Permanent resident of Karnataka",
+      "Father or Mother must be an agricultural landholder with valid Farmer ID (FID) in FRUITS database",
+      "Student admitted to recognized post-matric course in Karnataka"
+    ],
+    requiredDocuments: [
+      { name: "Parent Farmer ID (FID)", description: "Registered on Karnataka FRUITS portal", mandatory: true },
+      { name: "Student Aadhaar & College Admission ID", description: "Enrolled in SSP portal", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Apply via Karnataka SSP Portal", description: "Check the 'Raita Vidyanidhi' box and provide parent's FID number.", tip: "Automatically cross-verified with Revenue RTC." }
+    ],
+    officialPortalUrl: "https://ssp.postmatric.karnataka.gov.in",
+    portalName: "Karnataka SSP / FRUITS Portal",
+    helpline: "080-35254757",
+    faqs: [{ q: "Is this open to general category farmers?", a: "Yes, open to all farmers regardless of caste or income." }],
+    featured: false,
+    tags: ["Karnataka", "Farmers Children", "Raita Vidyanidhi", "Agriculture", "SSP"]
+  },
+  {
+    id: "mahadbt-rajarshi-shahu-ebc",
+    name: "MahaDBT Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti Yojna",
+    provider: "Directorate of Higher Education / Technical Education, Govt of Maharashtra",
+    badge: "State Govt (Maharashtra)",
+    category: "State Government",
+    amount: "50% to 100% Tuition & Exam Fee Reimbursement",
+    maxAmountNumeric: 80000,
+    level: ["10+2", "Diploma/ITI", "Undergraduate", "Postgraduate"],
+    applicableStates: "Maharashtra",
+    casteEligibility: ["General", "EWS", "OBC"],
+    gender: "All",
+    incomeCeiling: 800000,
+    incomeCeilingText: "Less than ₹8.0 Lakh / year (General / EBC category)",
+    minMarks: 40,
+    deadline: "2026-12-10",
+    status: "Open",
+    daysLeft: 46,
+    fullScope: "Flagship Maharashtra scheme offering 50% tuition and examination fee waiver for students from General/Open/Economically Backward Class (EBC) admitted to professional courses (Engineering, Medical, MBA, Pharmacy, Architecture) and non-professional degree courses.",
+    benefits: [
+      "50% reimbursement of approved tuition fees in Government & Private Unaided colleges",
+      "100% exam fee reimbursement",
+      "Hostel maintenance allowance under Dr. Panjabrao Deshmukh scheme for rural students",
+      "Disbursed straight to student or college through MahaDBT"
+    ],
+    eligibilityCriteria: [
+      "Domicile of Maharashtra state with valid Domicile Certificate",
+      "Admitted through Centralized Admission Process (CAP) in approved degree/diploma course",
+      "Annual family income strictly not exceeding ₹8,00,000 from all sources",
+      "Maximum 2 children of the family can take benefit of this scheme"
+    ],
+    requiredDocuments: [
+      { name: "Maharashtra Domicile Certificate", description: "Issued by Tahsildar / MahaOnline", mandatory: true },
+      { name: "Income Certificate (Tehsildar)", description: "Certified family income for previous FY", mandatory: true },
+      { name: "CAP Seat Allotment Letter", description: "Proving CAP round admission", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on mahadbt.maharashtra.gov.in", description: "Create user account with Aadhaar authentication.", tip: "Profile completion must be 100%." }
+    ],
+    officialPortalUrl: "https://mahadbt.maharashtra.gov.in",
+    portalName: "MahaDBT Portal",
+    helpline: "022-49150800 | support.mahadbt@gov.in",
+    faqs: [{ q: "Is this for General category students?", a: "Yes, this scheme is specifically designed for Open/General category students with family income < ₹8L." }],
+    featured: false,
+    tags: ["Maharashtra", "MahaDBT", "Rajarshi Shahu", "EBC", "General Category"]
+  },
+  {
+    id: "up-scholarship-post-matric",
+    name: "Uttar Pradesh (UP) Post-Matric & Dashmottar Scholarship Scheme",
+    provider: "Social Welfare / Backward Classes / Minority Welfare Dept, Govt of Uttar Pradesh",
+    badge: "State Govt (UP)",
+    category: "State Government",
+    amount: "100% Tuition Fee Reimbursement + Annual Maintenance",
+    maxAmountNumeric: 70000,
+    level: ["10+2", "Diploma/ITI", "Undergraduate", "Postgraduate"],
+    applicableStates: "Uttar Pradesh",
+    casteEligibility: ["General", "OBC", "SC", "ST", "Minority"],
+    gender: "All",
+    incomeCeiling: 250000,
+    incomeCeilingText: "General/OBC/Minority: < ₹2.0L; SC/ST: < ₹2.5L",
+    minMarks: 50,
     deadline: "2026-11-25",
     status: "Open",
     daysLeft: 31,
-    fullScope: "Dedicated to encouraging and supporting differently-abled students to achieve technical education. AICTE offers all eligible specially-abled students with disability not less than 40% a direct financial assistance of ₹50,000 every year of their degree or diploma.",
+    fullScope: "Uttar Pradesh's state scheme covering students pursuing Class 11, 12, BA, B.Sc, B.Com, B.Tech, MBBS, Polytechnic, and ITI across UP institutions. Completely waives government non-refundable fees.",
     benefits: [
-      "₹50,000 per annum for every year of technical degree/diploma program",
-      "Can be used for purchase of screen-readers, braille devices, wheelchairs, hearing aids, laptops, and college fees",
-      "All eligible applicants meeting minimum criteria are sanctioned (no cap on numbers)",
-      "Disbursed straight to student via Direct Benefit Transfer"
+      "Complete reimbursement of non-refundable college fees (up to ₹50,000+ for professional courses)",
+      "Monthly scholarship allowance credited via DBT",
+      "Direct Aadhaar authentication linked to PFMS"
     ],
     eligibilityCriteria: [
-      "Specially-abled student having disability of not less than 40%",
-      "Admitted to 1st year of Degree/Diploma course in an AICTE approved institution (or 2nd year through lateral entry)",
-      "Family income from all sources should not exceed ₹8 Lakh per annum"
+      "Domicile of Uttar Pradesh",
+      "Enrolled in a recognized institution registered with UP Scholarship Master Data",
+      "Family income within prescribed limits (SC/ST: up to ₹2.5L; General/OBC/Minority: up to ₹2.0L)"
     ],
     requiredDocuments: [
-      { name: "Unique Disability ID (UDID) / Disability Certificate", description: "Issued by competent medical board showing >= 40% disability", mandatory: true },
-      { name: "AICTE Admission Proof", description: "Allotment letter through centralized admission process", mandatory: true },
-      { name: "Income Certificate", description: "Issued by Revenue Officer not below Tehsildar rank", mandatory: true },
-      { name: "10th / 12th Board Marksheet", description: "Pass certificate of qualifying examination", mandatory: true },
-      { name: "Bank Passbook & Aadhaar Card", description: "Seeded for Direct Benefit Transfer", mandatory: true }
+      { name: "UP Domicile / Niwas Praman Patra", description: "Issued by UP Revenue e-District portal", mandatory: true },
+      { name: "Caste & Income Certificate with Application & Certificate No", description: "Digitally verifiable on edistrict.up.gov.in", mandatory: true },
+      { name: "College Fee Receipt & Roll No", description: "Current academic session receipt", mandatory: true }
     ],
     applicationSteps: [
-      { stepNumber: 1, title: "Create OTR on National Scholarship Portal", description: "Select AICTE Saksham Scheme for Specially Abled Students.", tip: "Ensure your UDID number is verified on Swavlamban portal." },
-      { stepNumber: 2, title: "Upload UDID Card & Disability Certificate", description: "Attach clear scan of UDID card or district hospital certificate.", tip: "Disability percentage must be clearly legible." },
-      { stepNumber: 3, title: "Institute Verification", description: "Inform your college scholarship nodal officer to verify on NSP portal.", tip: "Follow up regularly with college administration." }
+      { stepNumber: 1, title: "Register on scholarship.up.gov.in", description: "Choose 'Student Registration' -> Dashmottar Scheme.", tip: "Verify Aadhaar with DigiLocker." }
     ],
-    officialPortalUrl: "https://www.aicte-india.org/schemes/students-development-schemes/Saksham",
-    portalName: "NSP / AICTE Portal",
-    helpline: "011-29581000 | saksham@aicte-india.org",
-    faqs: [
-      { q: "Is there a merit cutoff?", a: "No, all eligible applicants with valid admission and >=40% disability who meet the income criteria are awarded." }
-    ],
+    officialPortalUrl: "https://scholarship.up.gov.in",
+    portalName: "UP Scholarship Portal",
+    helpline: "1800-180-5131 | Toll Free Helpdesk UP",
+    faqs: [{ q: "Can UP students studying outside UP apply?", a: "Yes, under the 'Post Matric Other State' category for recognized outside universities." }],
     featured: false,
-    tags: ["PwD", "Differently Abled", "AICTE", "Engineering", "Diploma"]
+    tags: ["Uttar Pradesh", "UP Scholarship", "Dashmottar", "State Portal"]
   },
+  {
+    id: "svmcm-west-bengal",
+    name: "Swami Vivekananda Merit-cum-Means Scholarship (SVMCM)",
+    provider: "Higher Education Department, Government of West Bengal",
+    badge: "State Govt (West Bengal)",
+    category: "State Government",
+    amount: "₹12,000 to ₹60,000 per annum",
+    maxAmountNumeric: 60000,
+    level: ["10+2", "Undergraduate", "Postgraduate", "PhD"],
+    applicableStates: "West Bengal",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "All",
+    incomeCeiling: 250000,
+    incomeCeilingText: "Less than ₹2.5 Lakh / year",
+    minMarks: 60,
+    deadline: "2026-12-31",
+    status: "Upcoming",
+    daysLeft: 67,
+    fullScope: "West Bengal's premier scholarship for meritorious and economically disadvantaged students pursuing Higher Secondary (10+2), Undergraduate Degree (Arts, Science, Commerce, Engineering, Medical), Post-graduation, and M.Phil/PhD.",
+    benefits: [
+      "Higher Secondary (10+2): ₹1,000/month (₹12,000/year)",
+      "Undergraduate (General): ₹1,000 to ₹1,500/month",
+      "Undergraduate (Engineering): ₹5,000/month (₹60,000/year)",
+      "Undergraduate (Medical MBBS): ₹5,000/month (₹60,000/year)",
+      "Postgraduate: ₹2,000 to ₹2,500/month"
+    ],
+    eligibilityCriteria: [
+      "Resident of West Bengal and passed qualifying exam from West Bengal board/council/university",
+      "Class 10 Madhyamik passed with >= 60% for 10+2 entry",
+      "Higher Secondary passed with >= 60% for Undergraduate entry",
+      "Annual family income not exceeding ₹2,50,000"
+    ],
+    requiredDocuments: [
+      { name: "WB Domicile Proof (Ration Card / Voter ID / Aadhaar)", description: "Proving permanent residence in West Bengal", mandatory: true },
+      { name: "Mark Sheet of Last Examination", description: "Showing minimum 60% marks", mandatory: true },
+      { name: "Income Certificate from BDO / SDO / Joint BDO", description: "Competent administrative officer", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on svmcm.wbhed.gov.in", description: "Submit application with Banglar Shiksha ID.", tip: "Ensure marksheet copy is clear." }
+    ],
+    officialPortalUrl: "https://svmcm.wbhed.gov.in",
+    portalName: "SVMCM West Bengal Portal",
+    helpline: "1800-102-8014 | helpdesk.svmcm-wb@gov.in",
+    faqs: [{ q: "What is the Kanyashree K3 scheme?", a: "Kanyashree K2 recipients pursuing PG with 45% marks receive direct SVMCM ₹2,000-₹2,500/mo." }],
+    featured: false,
+    tags: ["West Bengal", "SVMCM", "Higher Secondary", "Engineering", "Medical"]
+  },
+  {
+    id: "tn-pudhumai-penn-scheme",
+    name: "Moovalur Ramamirtham Ammaiyar Higher Education Assurance Scheme (Pudhumai Penn)",
+    provider: "Social Welfare and Women Empowerment Dept, Govt of Tamil Nadu",
+    badge: "State Govt (Tamil Nadu)",
+    category: "Girls Only",
+    amount: "₹1,000 per month (₹12,000 per annum direct to girl's account)",
+    maxAmountNumeric: 12000,
+    level: ["Undergraduate", "Diploma/ITI"],
+    applicableStates: "Tamil Nadu",
+    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
+    gender: "Female",
+    incomeCeiling: null,
+    incomeCeilingText: "No income limit (Must have studied in TN Govt Schools from Class 6 to 12)",
+    minMarks: 40,
+    deadline: "2026-11-30",
+    status: "Open",
+    daysLeft: 36,
+    fullScope: "Revolutionary initiative by Government of Tamil Nadu providing ₹1,000 every month directly to female students who completed their schooling from Class 6 to 12 in Tamil Nadu Government schools and enrolled in higher education degrees or diplomas.",
+    benefits: [
+      "₹1,000 monthly stipend transferred directly into the girl student's bank account every month until graduation",
+      "Can be availed alongside other government scholarships and fee concessions without deduction",
+      "Encourages female students from rural government schools to complete higher education"
+    ],
+    eligibilityCriteria: [
+      "Female student who studied continuously in Tamil Nadu Government schools from Class 6 to Class 12",
+      "Enrolled in 1st, 2nd, 3rd, 4th, or 5th year of any recognized Undergraduate Degree, Diploma, or ITI in Tamil Nadu",
+      "No family income ceiling or caste restriction"
+    ],
+    requiredDocuments: [
+      { name: "Government School Study Certificate (Class 6 to 12)", description: "Certified by school headmaster or EMIS database", mandatory: true },
+      { name: "College Student Identity Card", description: "Enrolled in higher education", mandatory: true },
+      { name: "Aadhaar Card & Bank Passbook", description: "In girl's own name", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on Pudhumai Penn Portal / Penkalvi", description: "Visit pudhumaipenn.tn.gov.in through your college nodal desk.", tip: "EMIS number auto-fetches school records." }
+    ],
+    officialPortalUrl: "https://www.penkalvi.tn.gov.in",
+    portalName: "Tamil Nadu Pudhumai Penn Portal",
+    helpline: "044-25670868 | penkalvi@tn.gov.in",
+    faqs: [{ q: "Can I receive this if I have another scholarship?", a: "Yes, Pudhumai Penn can be received concurrently with any other central or state scholarship." }],
+    featured: true,
+    tags: ["Tamil Nadu", "Pudhumai Penn", "Girls Only", "Govt School Scholars", "Monthly Stipend"]
+  },
+  {
+    id: "gujarat-mysy-scholarship",
+    name: "Mukhyamantri Yuva Swavalamban Yojana (MYSY Gujarat)",
+    provider: "Education Department, Government of Gujarat",
+    badge: "State Govt (Gujarat)",
+    category: "State Government",
+    amount: "50% Tuition Fee (Up to ₹2,00,000/yr) + Hostel & Book Grant",
+    maxAmountNumeric: 200000,
+    level: ["Undergraduate", "Diploma/ITI"],
+    applicableStates: "Gujarat",
+    casteEligibility: ["General", "EWS", "OBC", "SC", "ST"],
+    gender: "All",
+    incomeCeiling: 600000,
+    incomeCeilingText: "Less than ₹6.0 Lakh / year",
+    minMarks: 80,
+    deadline: "2026-12-15",
+    status: "Open",
+    daysLeft: 51,
+    fullScope: "Gujarat's premier welfare scheme to support meritorious students of all categories whose family income is below ₹6 Lakh. Reimburses 50% tuition fees for Medical (MBBS up to ₹2 Lakh/yr), Engineering (up to ₹50,000/yr), Diploma, and Degree programs.",
+    benefits: [
+      "Medical/Dental (MBBS/BDS): 50% tuition fee up to ₹2,00,000 per year",
+      "Professional Courses (Engineering/Pharmacy/Architecture): 50% fee up to ₹50,000 per year",
+      "Hostel Grant: ₹1,200 per month (₹12,000/year) for students studying outside their taluka",
+      "Book Grant: ₹10,000 for Medical, ₹5,000 for Engineering, ₹3,000 for Diploma"
+    ],
+    eligibilityCriteria: [
+      "Passed Class 10 or 12 from Gujarat Board with minimum 80 percentile or above",
+      "Admitted to 1st year of Diploma or Degree program in recognized Gujarat college",
+      "Family annual income strictly not exceeding ₹6,00,000"
+    ],
+    requiredDocuments: [
+      { name: "Gujarat Board Marksheet with Percentile Rank", description: "Showing >= 80 percentile", mandatory: true },
+      { name: "Income Certificate (Mamlatdar / TDO)", description: "Issued by revenue department", mandatory: true },
+      { name: "Admission Receipt & College Fee Breakdown", description: "Paid receipt copy", mandatory: true }
+    ],
+    applicationSteps: [
+      { stepNumber: 1, title: "Register on mysy.guj.nic.in", description: "Enter 10th/12th board seat number and password.", tip: "Take printout to nearest Help Centre for physical verification." }
+    ],
+    officialPortalUrl: "https://mysy.guj.nic.in",
+    portalName: "Gujarat MYSY Portal",
+    helpline: "079-26566000 | mysygu自主@gmail.com",
+    faqs: [{ q: "What is the percentile cutoff?", a: "Candidate must secure minimum 80 percentile in 10th (for Diploma) or 12th (for Degree)." }],
+    featured: false,
+    tags: ["Gujarat", "MYSY", "MBBS", "Engineering", "Tuition Waiver", "Hostel Grant"]
+  },
+
+  // ==========================================
+  // 6. HIGHER EDUCATION & STUDY ABROAD
+  // ==========================================
   {
     id: "fulbright-nehru-masters",
     name: "Fulbright-Nehru Master's Fellowships (Study in USA)",
@@ -401,306 +1103,73 @@ export const SCHOLARSHIPS_DATA = [
       "100% J-1 visa sponsorship and full university tuition waiver in top US universities",
       "Monthly living allowance covering accommodation, food, and local transit",
       "Roundtrip economy air travel from hometown to host institution in the USA",
-      "Accident and sickness coverage per US Government guidelines",
-      "Prestigious global alumni network and leadership seminars across the US"
+      "Accident and sickness coverage per US Government guidelines"
     ],
     eligibilityCriteria: [
-      "Completed an equivalent of a U.S. bachelor's degree (either 4-year degree or a master's degree) with minimum 55% marks",
-      "At least three years of full-time professional work experience in the relevant field by application deadline",
-      "Demonstrated leadership qualities and commitment to return to India upon completion",
-      "Must not have completed a prior degree from a US university"
+      "Completed an equivalent of a U.S. bachelor's degree with minimum 55% marks",
+      "At least three years of full-time professional work experience in the relevant field",
+      "Demonstrated leadership qualities and commitment to return to India upon completion"
     ],
     requiredDocuments: [
-      { name: "Academic Transcripts & Degree Certificates", description: "Attested transcripts of all undergraduate and post-graduate studies", mandatory: true },
-      { name: "Three Letters of Recommendation (LoR)", description: "From academic supervisors or professional managers", mandatory: true },
-      { name: "Statement of Purpose & Personal Essay", description: "Explaining academic goals, leadership journey, and plan to impact India", mandatory: true },
-      { name: "Curriculum Vitae (CV / Resume)", description: "Detailed 2-page academic and professional experience CV", mandatory: true },
-      { name: "Work Experience Certificates", description: "Proof of 3 years full-time experience", mandatory: true }
+      { name: "Academic Transcripts & Degree Certificates", description: "Attested transcripts", mandatory: true },
+      { name: "Three Letters of Recommendation (LoR)", description: "From supervisors/professors", mandatory: true },
+      { name: "Statement of Purpose & Personal Essay", description: "Leadership journey & goals", mandatory: true }
     ],
     applicationSteps: [
-      { stepNumber: 1, title: "Register on USIEF Online Portal", description: "Create your Fulbright-Nehru profile at usief.org.in during the open window.", tip: "Start drafting your Statement of Purpose 2 months before deadline." },
-      { stepNumber: 2, title: "Request Letters of Recommendation", description: "Invite 3 recommenders through the online portal system.", tip: "Choose mentors who can speak concretely about your leadership skills." },
-      { stepNumber: 3, title: "National Selection Interview", description: "Shortlisted candidates are invited for in-person or video panel interview in New Delhi.", tip: "Demonstrate strong cultural ambassadorship and clarity of goals." },
-      { stepNumber: 4, title: "University Placement & Pre-departure", description: "USIEF assists selected fellows with university admission, GRE/TOEFL waivers, and J-1 visa.", tip: "Fellows must return to India for minimum 2 years after completion." }
+      { stepNumber: 1, title: "Register on USIEF Online Portal", description: "Create your Fulbright-Nehru profile at usief.org.in.", tip: "Draft essay early." }
     ],
     officialPortalUrl: "https://www.usief.org.in/Fulbright-Nehru-Master-Fellowships.aspx",
     portalName: "USIEF Official Portal",
     helpline: "011-42090909 | ip@usief.org.in",
-    faqs: [
-      { q: "Is GRE or TOEFL required at the time of application?", a: "No, USIEF provides test fee vouchers to shortlisted candidates for required standardized tests." },
-      { q: "Can I stay back in the US to work?", a: "Fulbright J-1 visa has a mandatory 2-year home country physical presence requirement." }
-    ],
+    faqs: [{ q: "Is GRE required at application?", a: "No, test fee vouchers are provided by USIEF to shortlisted candidates." }],
     featured: false,
     tags: ["Abroad", "USA", "Master's", "Full Ride", "USIEF", "Fellowship"]
   },
   {
-    id: "karnataka-ssp-post-matric",
-    name: "Karnataka State Scholarship Portal (SSP) Post-Matric Scheme",
-    provider: "Social Welfare / Tribal Welfare / Backward Classes Welfare Dept, Govt of Karnataka",
-    badge: "State Govt (Karnataka)",
-    category: "State Government",
-    amount: "100% Fee Reimbursement + Monthly Maintenance (Up to ₹60,000/yr)",
-    maxAmountNumeric: 60000,
-    level: ["10+2", "Diploma/ITI", "Undergraduate", "Postgraduate"],
-    applicableStates: "Karnataka",
-    casteEligibility: ["SC", "ST", "OBC", "EWS", "Minority"],
-    gender: "All",
-    incomeCeiling: 250000,
-    incomeCeilingText: "SC/ST: < ₹2.5L; OBC/Minority: < ₹1.0L to ₹2.5L",
-    minMarks: 40,
-    deadline: "2026-11-28",
-    status: "Open",
-    daysLeft: 34,
-    fullScope: "Karnataka's state-of-the-art unified portal providing fee reimbursement, Vidyasiri food and accommodation scheme, and maintenance allowance to all eligible students residing in Karnataka and pursuing PU, Diploma, Degree, Engineering, or PG courses.",
-    benefits: [
-      "Complete tuition fee waiver directly disbursed to colleges under state regulatory fees",
-      "Vidyasiri monthly stipend of ₹1,500/month for food and accommodation for non-hostellers",
-      "Automated e-Attestation system eliminates physical queueing at government offices",
-      "Direct DBT transfer via Aadhaar payment bridge to verified bank accounts"
-    ],
-    eligibilityCriteria: [
-      "Domicile of Karnataka State with valid RD certificate number",
-      "Belonging to SC, ST, OBC (Category 1, 2A, 2B, 3A, 3B), or Minority communities",
-      "Annual income within limits (SC/ST: up to ₹2.5L; OBC Cat-1: ₹2.5L; 2A/2B/3A/3B: ₹1L)",
-      "Passed previous qualifying exam and admitted to recognized Karnataka institution"
-    ],
-    requiredDocuments: [
-      { name: "Caste & Income RD Number (15-digit)", description: "Obtained from Nadakacheri portal with digital certificate", mandatory: true },
-      { name: "Student Aadhaar & Ration Card Number", description: "Food & Civil Supplies department verified family ration card", mandatory: true },
-      { name: "College Registration Number / USN", description: "University Seat Number or College Roll Number", mandatory: true },
-      { name: "Fee Receipt with E-Attestation Number", description: "Uploaded and e-attested by designated district verification officer", mandatory: true },
-      { name: "Disability Certificate (If PwD)", description: "UDID number issued by Karnataka Health Dept", mandatory: false }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Create SSP Student Account", description: "Register on ssp.postmatric.karnataka.gov.in using Aadhaar authentication.", tip: "Ensure your mobile number is active to receive OTP." },
-      { stepNumber: 2, title: "Fetch Caste & Income using RD Number", description: "Enter 15-digit RD number; the portal auto-fetches name and category.", tip: "Name on RD certificate must match Aadhaar." },
-      { stepNumber: 3, title: "Submit E-Attestation Documents", description: "Upload study certificate and fee receipt to the e-Attestation portal for officer approval.", tip: "Contact your college nodal officer to approve the attestation." },
-      { stepNumber: 4, title: "Final Application Submission", description: "Enter approved e-Attestation numbers into SSP portal and click Final Submit.", tip: "Check payment status on SSP Dashboard." }
-    ],
-    officialPortalUrl: "https://ssp.postmatric.karnataka.gov.in",
-    portalName: "Karnataka SSP Portal",
-    helpline: "080-35254757 | ssp.helpdesk@karnataka.gov.in",
-    faqs: [
-      { q: "What is e-Attestation in Karnataka SSP?", a: "It is an online system where designated taluk officers verify your fee receipt and bonafide before you can submit on SSP." },
-      { q: "What is the Vidyasiri scheme under SSP?", a: "It provides ₹15,000/year to rural students who do not get hostel admission to cover rent and meals in cities." }
-    ],
-    featured: false,
-    tags: ["Karnataka", "SSP", "Vidyasiri", "Fee Reimbursement", "State Portal"]
-  },
-  {
-    id: "mahadbt-post-matric-maharashtra",
-    name: "MahaDBT Post-Matric Scholarship Scheme (Maharashtra)",
-    provider: "Social Justice and Special Assistance Dept, Govt of Maharashtra",
-    badge: "State Govt (Maharashtra)",
-    category: "State Government",
-    amount: "100% Tuition & Exam Fee Reimbursement + Maintenance Allowance",
-    maxAmountNumeric: 85000,
-    level: ["10+2", "Diploma/ITI", "Undergraduate", "Postgraduate"],
-    applicableStates: "Maharashtra",
-    casteEligibility: ["SC", "ST", "OBC", "EWS"],
-    gender: "All",
-    incomeCeiling: 250000,
-    incomeCeilingText: "SC/ST: < ₹2.5L; VJNT/OBC: < ₹1.5L; EBC (Rajarshi Shahu): < ₹8.0L",
-    minMarks: 40,
-    deadline: "2026-12-10",
-    status: "Open",
-    daysLeft: 46,
-    fullScope: "Maharashtra's comprehensive portal for Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti Yojna, Post-Matric SC/ST/OBC schemes, and Dr. Panjabrao Deshmukh Hostel Maintenance Allowance. Offers full or partial tuition reimbursement depending on course and income tier.",
-    benefits: [
-      "100% tuition and exam fee waiver for SC/ST students in government & private unaided institutes",
-      "50% fee reimbursement for EBC / Open category students under Rajarshi Shahu scheme",
-      "Hostel maintenance allowance up to ₹30,000 per year for students from rural areas",
-      "Direct Aadhaar enabled payment to bank account without middle agents"
-    ],
-    eligibilityCriteria: [
-      "Domicile of Maharashtra state with valid Domicile Certificate",
-      "Passed Class 10/12 from Maharashtra and pursuing post-matric studies",
-      "Annual family income within limits set for specific caste/category sub-schemes",
-      "Only 2 children of the same parent eligible under general rules"
-    ],
-    requiredDocuments: [
-      { name: "Maharashtra Domicile Certificate", description: "Issued by Tahsildar / MahaOnline CSC", mandatory: true },
-      { name: "Caste & Caste Validity Certificate", description: "Mandatory for SC/ST/VJNT/OBC students pursuing professional courses", mandatory: true },
-      { name: "Income Certificate (Tehsildar)", description: "Certified family income for previous financial year", mandatory: true },
-      { name: "CAP Seat Allotment Letter", description: "Proving admission through Centralized Allotment Process", mandatory: true },
-      { name: "Fee Receipt & Previous Year Marksheets", description: "All semester marksheets and valid fee receipt", mandatory: true }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Register on MahaDBT Portal", description: "Log on to mahadbt.maharashtra.gov.in using Aadhaar biometrics or mobile OTP.", tip: "Make sure Aadhaar name matches 10th marksheet." },
-      { stepNumber: 2, title: "Create Complete Profile", description: "Fill Personal, Address, Caste, Income, and Past Qualification sections accurately.", tip: "100% profile completion is required to unlock schemes." },
-      { stepNumber: 3, title: "Select Department & Applicable Scheme", description: "E.g., Social Justice Dept for SC, Tribal Development for ST, or DTE for EBC.", tip: "Check whether your family income qualifies for full or 50% waiver." },
-      { stepNumber: 4, title: "Institute Scrutiny & Approval", description: "Application goes to college clerk -> college principal -> district social welfare officer.", tip: "Check portal weekly for any 'Defective' flag and correct within 7 days." }
-    ],
-    officialPortalUrl: "https://mahadbt.maharashtra.gov.in",
-    portalName: "MahaDBT Portal",
-    helpline: "022-49150800 | support.mahadbt@gov.in",
-    faqs: [
-      { q: "Is Caste Validity compulsory for engineering and medical?", a: "Yes, Caste Validity Certificate is mandatory for reserved category students admitted to professional colleges in Maharashtra." },
-      { q: "What is the Rajarshi Shahu Maharaj Scheme?", a: "It provides 50% tuition and exam fee reimbursement to general/EBC students with family income under ₹8 Lakh." }
-    ],
-    featured: false,
-    tags: ["Maharashtra", "MahaDBT", "Rajarshi Shahu", "State Portal", "Fee Waiver"]
-  },
-  {
-    id: "hdfc-badhte-kadam",
-    name: "HDFC Bank Parivartan's Badhte Kadam Scholarship",
-    provider: "HDFC Bank (CSR Parivartan)",
-    badge: "CSR - HDFC Bank",
-    category: "Corporate & CSR",
-    amount: "₹18,000 to ₹1,00,000 per annum",
-    maxAmountNumeric: 100000,
-    level: ["School", "10+2", "Undergraduate", "Postgraduate", "Diploma/ITI"],
-    applicableStates: "All India",
-    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
-    gender: "All",
-    incomeCeiling: 600000,
-    incomeCeilingText: "Less than ₹6.0 Lakh / year (Special priority to COVID/crisis affected)",
-    minMarks: 60,
-    deadline: "2026-11-05",
-    status: "Closing Soon",
-    daysLeft: 11,
-    fullScope: "A flagship CSR program by HDFC Bank to support students who are going through severe personal or financial crises (such as loss of breadwinning parent, critical illness in family, or severe financial distress). Enables students from Class 11 up to Post-graduation to continue their education without dropping out.",
-    benefits: [
-      "School (Class 11 & 12): ₹18,000 per year",
-      "General Undergraduate Degree: ₹30,000 per year",
-      "Professional Degree (Engineering, Medical, Law): ₹1,00,000 per year",
-      "Special psychosocial counseling and career mentoring for students facing family crisis"
-    ],
-    eligibilityCriteria: [
-      "Open for Indian students pursuing Class 11, 12, Diploma, ITI, Undergraduate, or Postgraduate degrees",
-      "Must have scored at least 60% marks in previous qualifying exam",
-      "Annual family income must not exceed ₹6,00,000 from all sources",
-      "Priority given to students who lost a parent, have critically ill parents, or faced job loss in family"
-    ],
-    requiredDocuments: [
-      { name: "Previous Academic Marksheet", description: "Class 10/12/Semester marksheet with >= 60%", mandatory: true },
-      { name: "Proof of Admission", description: "College ID, Admission letter, or current year fee receipt", mandatory: true },
-      { name: "Government Identity Proof", description: "Aadhaar card / Voter ID / Passport", mandatory: true },
-      { name: "Proof of Family Income / Crisis", description: "Income Certificate / Salary Slip / Death certificate of parent (if applicable)", mandatory: true },
-      { name: "Applicant Bank Account Details", description: "Passbook copy or cancelled cheque", mandatory: true }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Apply Online via HDFC Parivartan Desk", description: "Fill application on the designated scholarship portal with personal and academic details.", tip: "Mention any personal or financial crisis clearly in the hardship section." },
-      { stepNumber: 2, title: "Document Upload & Review", description: "Upload scanned copies of marksheet, fee receipt, and crisis evidence.", tip: "Keep files under 1MB each in PDF or JPG." },
-      { stepNumber: 3, title: "Telephonic Need Assessment", description: "The foundation team calls to verify financial distress and career aspirations.", tip: "Keep your parents or guardians nearby during the phone interview." },
-      { stepNumber: 4, title: "Grant Award & Direct Transfer", description: "Shortlisted scholars receive email confirmation and grant is credited straight to account.", tip: "Receipt must be submitted to claim next year's installment." }
-    ],
-    officialPortalUrl: "https://www.hdfcbank.com/personal/about-us/corporate-social-responsibility/parivartan",
-    portalName: "HDFC Parivartan / Partner Portal",
-    helpline: "011-43092248 | badhtekadam@buddy4study.com",
-    faqs: [
-      { q: "Can students from private colleges apply?", a: "Yes, students from both government and private recognized colleges across India are eligible." },
-      { q: "Are general category students eligible?", a: "Yes, this scholarship is open to students of all castes based on merit and financial need." }
-    ],
-    featured: false,
-    tags: ["HDFC Bank", "Parivartan", "Crisis Support", "All Streams", "Undergraduate"]
-  },
-  {
-    id: "inspire-she-fellowship",
-    name: "INSPIRE Scholarship for Higher Education (SHE)",
-    provider: "Department of Science and Technology (DST), Govt of India",
-    badge: "DST Science Fellowship",
-    category: "Government Central",
-    amount: "₹80,000 per annum (₹60k cash + ₹20k summer project)",
-    maxAmountNumeric: 80000,
-    level: ["Undergraduate", "Postgraduate"],
+    id: "chevening-scholarship-uk",
+    name: "Chevening Scholarships (Study 1-Year Master's in the United Kingdom)",
+    provider: "Foreign, Commonwealth & Development Office (UK Government)",
+    badge: "UK Government Fellowship",
+    category: "Study Abroad",
+    amount: "Full Tuition Fees + Monthly Stipend + UK Flights + Visa (approx. £35,000)",
+    maxAmountNumeric: 3800000,
+    level: ["Postgraduate"],
     applicableStates: "All India",
     casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
     gender: "All",
     incomeCeiling: null,
-    incomeCeilingText: "No Income Bar (Pure Merit in Natural/Basic Sciences)",
-    minMarks: 95,
-    deadline: "2026-12-31",
-    status: "Upcoming",
-    daysLeft: 67,
-    fullScope: "A prestigious central fellowship designed to attract talent to the study of basic and natural sciences at an early stage. Offers 10,000 scholarships annually to students pursuing B.Sc, B.S., and Int. M.Sc courses in Physics, Chemistry, Mathematics, Biology, Astronomy, etc.",
-    benefits: [
-      "Total value ₹80,000 per candidate per year for up to 5 years (B.Sc through M.Sc)",
-      "₹60,000 annual scholarship deposited directly into SBI bank account (₹5,000 per month)",
-      "₹20,000 mentorship grant per year for undertaking research projects in premier labs like IISc, IITs, IISERs",
-      "Continued support for 5 years subject to maintaining 60% marks in degree examinations"
-    ],
-    eligibilityCriteria: [
-      "Top 1% of successful students in Class 12 Board examination (State or Central boards)",
-      "Enrolled in regular courses in Natural and Basic Sciences at B.Sc, B.S., or 5-year Integrated M.Sc level",
-      "Rank holders in JEE (Main) / JEE (Advanced) within top 10,000 or NEET top 10,000 who opt for basic sciences",
-      "KVPY Fellows, NTSE Scholars, and International Olympiad medalists are also eligible"
-    ],
-    requiredDocuments: [
-      { name: "Class 12 Board Marksheet & Advisory Note", description: "Showing candidate falls in top 1% cutoff of that board", mandatory: true },
-      { name: "Endorsement Certificate from College Principal", description: "Signed in prescribed DST format verifying B.Sc enrollment", mandatory: true },
-      { name: "Class 10 Certificate / Date of Birth Proof", description: "Official 10th pass certificate", mandatory: true },
-      { name: "SBI Savings Bank Account Passbook", description: "Only State Bank of India account in student's name is accepted by DST", mandatory: true }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Register on INSPIRE Online Portal", description: "Visit online-inspire.gov.in and create user credentials.", tip: "Only basic science subjects (Physics, Chem, Math, Bio, Earth Sci) are eligible." },
-      { stepNumber: 2, title: "Upload Endorsement Certificate & Marksheets", description: "Download official Endorsement Form, get it stamped by your College Principal, and upload.", tip: "Ensure the college AISHE code is correctly filled." },
-      { stepNumber: 3, title: "Submit SBI Account Details", description: "Open a regular savings account in State Bank of India and submit details for DBT.", tip: "DST strictly disburses only through SBI accounts." },
-      { stepNumber: 4, title: "Summer Research Project Submission", description: "Every summer, submit a research project report supervised by an approved mentor to unlock the ₹20,000 bonus grant.", tip: "Connect with research labs early in your 1st year." }
-    ],
-    officialPortalUrl: "https://online-inspire.gov.in",
-    portalName: "DST INSPIRE Portal",
-    helpline: "0120-4676260 | inspire.prog-dst@nic.in",
-    faqs: [
-      { q: "Are engineering (B.Tech) or medical (MBBS) students eligible?", a: "No, INSPIRE SHE is strictly for Basic and Natural Sciences (B.Sc / Int M.Sc)." },
-      { q: "Is there any family income limit?", a: "No, there is zero income restriction; it is 100% based on academic merit." }
-    ],
-    featured: true,
-    tags: ["Science", "DST", "INSPIRE", "Research", "B.Sc", "M.Sc", "Pure Merit"]
-  },
-  {
-    id: "lic-golden-jubilee-scholarship",
-    name: "LIC Golden Jubilee Scholarship Scheme",
-    provider: "Life Insurance Corporation of India (LIC Golden Jubilee Foundation)",
-    badge: "PSU Foundation",
-    category: "Corporate & CSR",
-    amount: "₹20,000 to ₹40,000 per annum",
-    maxAmountNumeric: 40000,
-    level: ["10+2", "Diploma/ITI", "Undergraduate"],
-    applicableStates: "All India",
-    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
-    gender: "All",
-    incomeCeiling: 250000,
-    incomeCeilingText: "Less than ₹2.5 Lakh / year",
+    incomeCeilingText: "No income bar; based on global leadership potential",
     minMarks: 60,
-    deadline: "2026-11-22",
-    status: "Open",
-    daysLeft: 28,
-    fullScope: "To provide scholarships to economically weaker students to enable them to pursue higher studies in medicine, engineering, graduation in any discipline, diploma courses, and vocational courses through ITI. Special dedicated quota for girl child pursuing 10+2.",
+    deadline: "2026-11-05",
+    status: "Closing Soon",
+    daysLeft: 11,
+    fullScope: "The UK government's global scholarship programme, funded by the Foreign, Commonwealth and Development Office (FCDO). Enables outstanding emerging leaders from India to pursue a one-year master's degree in any subject at any top-tier UK university.",
     benefits: [
-      "Medical Students: ₹40,000 per annum (paid in 3 installments)",
-      "Engineering Students: ₹30,000 per annum",
-      "General Graduation / Diploma: ₹20,000 per annum",
-      "Special Girls Scholarship: ₹15,000 per annum for 10+2 higher secondary studies",
-      "Direct NEFT credit into student's personal bank account"
+      "Full university tuition fees paid directly to chosen UK university",
+      "Monthly living stipend covering accommodation, food, and transport",
+      "Economy class return flights from India to the UK",
+      "Free student visa and arrival allowances"
     ],
     eligibilityCriteria: [
-      "Passed Class 10 or 12 examination in current academic year with at least 60% marks",
-      "Enrolled in 1st year of Medical, Engineering, Degree, Diploma, or ITI course",
-      "Annual family income of parents from all sources not exceeding ₹2,50,000 per annum",
-      "Students who have received financial aid from other PSUs or corporates may have restrictions"
+      "Citizen of India committed to return to India for minimum two years after degree",
+      "Completed undergraduate degree with equivalent of upper second-class 2:1 honours",
+      "Minimum 2 years of work experience (equivalent to 2,800 hours)",
+      "Apply to 3 different eligible UK university courses"
     ],
     requiredDocuments: [
-      { name: "Class 10 / 12 Passing Marksheet", description: "Showing minimum 60% aggregate marks", mandatory: true },
-      { name: "Admission Fee Receipt / College ID", description: "Proof of enrollment in recognized higher education", mandatory: true },
-      { name: "Income Certificate of Parents", description: "Issued by revenue department or employer salary slip", mandatory: true },
-      { name: "Bank Account Passbook / Cancelled Cheque", description: "Student's bank account with IFSC code", mandatory: true },
-      { name: "Aadhaar Card copy", description: "Identity and address proof", mandatory: true }
+      { name: "Undergraduate Degree Transcript", description: "Minimum 60% aggregate", mandatory: true },
+      { name: "Two References / Recommendation Letters", description: "In prescribed format", mandatory: true },
+      { name: "Four 500-word Essays", description: "Leadership, Networking, Studying in UK, Career Plan", mandatory: true }
     ],
     applicationSteps: [
-      { stepNumber: 1, title: "Online Application on LIC India Portal", description: "Navigate to licindia.in and click on 'Golden Jubilee Scholarship' link.", tip: "No application fee is charged by LIC." },
-      { stepNumber: 2, title: "Select Nearest LIC Divisional Office", description: "Choose the LIC Division that covers your home district.", tip: "Selection is handled by the local Divisional Office committee." },
-      { stepNumber: 3, title: "Physical Document Verification", description: "Shortlisted students receive an intimation letter to submit original certificates at the LIC branch.", tip: "Keep original marksheets ready for verification." },
-      { stepNumber: 4, title: "Direct Transfer & Renewal", description: "Scholarship is credited in three regular installments per year upon showing passing results.", tip: "Submit semester marksheets promptly for continuous payment." }
+      { stepNumber: 1, title: "Apply at chevening.org/apply", description: "Submit essays and academic history.", tip: "Draft concrete examples of how you led a project." }
     ],
-    officialPortalUrl: "https://licindia.in/web/guest/golden-jubilee-scholarship-scheme",
-    portalName: "LIC Official Portal",
-    helpline: "022-68276827 | co_gjf@licindia.com",
-    faqs: [
-      { q: "Can ITI students apply?", a: "Yes, students pursuing 2-year ITI courses after Class 10 with 60% marks are eligible for ₹20,000/yr." }
-    ],
-    featured: false,
-    tags: ["LIC", "PSU", "Medical", "Engineering", "Diploma", "ITI"]
+    officialPortalUrl: "https://www.chevening.org/scholarship/india",
+    portalName: "UK Government Chevening Portal",
+    helpline: "chevening.org/contact-us",
+    faqs: [{ q: "Can I stay in the UK after completing the degree?", a: "Chevening fellows must return to their home country for at least two years after completing their course." }],
+    featured: true,
+    tags: ["Abroad", "UK", "Master's", "Full Ride", "Chevening", "Leadership"]
   },
   {
     id: "narotam-sekhsaria-scholarship",
@@ -720,146 +1189,30 @@ export const SCHOLARSHIPS_DATA = [
     deadline: "2026-03-15",
     status: "Upcoming",
     daysLeft: 141,
-    fullScope: "Designed to help brilliant Indian graduates pursue post-graduate studies at prestigious global and Indian universities (e.g. Harvard, Stanford, Oxford, Cambridge, IIMs, IISc). Offers completely interest-free loan scholarships with a generous repayment schedule starting only 1 year after course completion.",
+    fullScope: "Designed to help brilliant Indian graduates pursue post-graduate studies at prestigious global and Indian universities (e.g. Harvard, Stanford, Oxford, Cambridge, IIMs, IISc). Completely interest-free with repayment starting only 1 year after graduation.",
     benefits: [
       "Interest-free loan scholarship up to ₹20 Lakh depending on candidate need and course fees",
-      "Zero interest charged throughout the course duration and during the 1-year grace period",
-      "Flexible repayment schedule spread over 2 to 4 years post graduation",
-      "Access to the Sekhsaria Scholar Alumni network and senior industry leaders"
+      "Zero interest charged throughout the course duration and 1-year grace period",
+      "Flexible repayment schedule spread over 2 to 4 years post graduation"
     ],
     eligibilityCriteria: [
       "Indian nationals residing in India",
       "Graduates from an accredited Indian university with consistently high academic record",
-      "Applying for or holding admission in top-ranked Master's or PhD programs in India or abroad",
       "Under 30 years of age as of application deadline"
     ],
     requiredDocuments: [
-      { name: "Undergraduate Marksheets & Degree", description: "Complete transcript of all semesters", mandatory: true },
-      { name: "University Admission Offer Letter", description: "Conditional or confirmed offer letter from target university", mandatory: true },
-      { name: "GRE / GMAT / IELTS / TOEFL Scorecard", description: "Official test report form", mandatory: true },
-      { name: "Two Recommendation Letters", description: "From professors or research supervisors", mandatory: true },
-      { name: "Detailed Statement of Purpose & Financial Plan", description: "How you plan to finance total tuition and living costs", mandatory: true }
+      { name: "Undergraduate Marksheets & Degree", description: "Complete transcript", mandatory: true },
+      { name: "University Admission Offer Letter", description: "Offer letter from target university", mandatory: true }
     ],
     applicationSteps: [
-      { stepNumber: 1, title: "Register on nsfoundation.co.in", description: "Submit initial application and pay nominal registration fee.", tip: "Applications open in January every year." },
-      { stepNumber: 2, title: "Document Upload & Essay Submission", description: "Upload academic credentials and statement of purpose.", tip: "Highlight your original research, patents, or unique community contributions." },
-      { stepNumber: 3, title: "In-Person Panel Interview in Mumbai", description: "Shortlisted candidates are invited for rigorous interview with eminent academicians.", tip: "Foundation reimburses travel expenses for interviewees." },
-      { stepNumber: 4, title: "Loan Scholarship Sanction & Agreement", description: "Legal deed executed and funds transferred prior to university fee deadline.", tip: "Repayment begins 12 months after course completion." }
+      { stepNumber: 1, title: "Register on nsfoundation.co.in", description: "Submit initial application in January.", tip: "Highlight original research." }
     ],
     officialPortalUrl: "https://pg.nsfoundation.co.in",
     portalName: "Narotam Sekhsaria Foundation",
     helpline: "022-61326200 | pgfellowship@nsfoundation.co.in",
-    faqs: [
-      { q: "Is collateral required for this loan scholarship?", a: "A guarantor (parent or family member) signs the agreement; no property mortgage is required." }
-    ],
+    faqs: [{ q: "Is collateral required?", a: "A guarantor signs the agreement; no property mortgage is needed." }],
     featured: false,
-    tags: ["Abroad", "Master's", "PhD", "Ivy League", "Interest-free", "Postgraduate"]
-  },
-  {
-    id: "national-means-cum-merit-nmms",
-    name: "National Means-cum-Merit Scholarship Scheme (NMMSS)",
-    provider: "Department of School Education & Literacy, Govt of India",
-    badge: "Central Govt (School)",
-    category: "School Education",
-    amount: "₹12,000 per annum (₹1,000 per month)",
-    maxAmountNumeric: 12000,
-    level: ["School"],
-    applicableStates: "All India",
-    casteEligibility: ["General", "OBC", "SC", "ST", "EWS", "Minority"],
-    gender: "All",
-    incomeCeiling: 350000,
-    incomeCeilingText: "Less than ₹3.5 Lakh / year",
-    minMarks: 55,
-    deadline: "2026-11-15",
-    status: "Closing Soon",
-    daysLeft: 21,
-    fullScope: "To award scholarships to meritorious students of economically weaker sections to arrest their drop-out at class VIII and encourage them to continue study at secondary stage (Class 9 to Class 12). 1,00,000 scholarships are sanctioned every year across all states.",
-    benefits: [
-      "₹12,000 per year (₹1,000 per month) for 4 years from Class 9 to Class 12",
-      "Total ₹48,000 financial support to complete schooling",
-      "Direct Benefit Transfer into student's personal bank account via SBI / Public Sector banks",
-      "Prevents student dropouts in government and local body schools"
-    ],
-    eligibilityCriteria: [
-      "Studying as regular student in Class 8 in a Government, Local Body or Government-aided school",
-      "Minimum 55% marks or equivalent grade in Class 7 annual exam (50% for SC/ST)",
-      "Parental income from all sources not exceeding ₹3,50,000 per annum",
-      "Must qualify the State-level NMMS Examination consisting of Mental Ability Test (MAT) & Scholastic Aptitude Test (SAT)",
-      "Students of Kendriya Vidyalayas, Jawahar Navodaya Vidyalayas, and residential schools are not eligible"
-    ],
-    requiredDocuments: [
-      { name: "Class 7 Pass Marksheet", description: "Showing minimum 55% marks (50% for SC/ST)", mandatory: true },
-      { name: "Parental Income Certificate", description: "Issued by Tehsildar / designated government officer", mandatory: true },
-      { name: "Caste / PwD Certificate (If applicable)", description: "For reservation benefit", mandatory: false },
-      { name: "NMMS Selection Merit Card / Roll Number", description: "Proof of passing the state NMMS competitive exam", mandatory: true },
-      { name: "Aadhaar Linked Bank Passbook", description: "Account in student's name in any commercial bank", mandatory: true }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Appear for State NMMS Exam in Class 8", description: "Register through your school headmaster for the annual NMMS examination conducted by SCERT.", tip: "Practice previous 5 years MAT and SAT question papers." },
-      { stepNumber: 2, title: "Check District Merit List", description: "SCERT publishes the list of qualifying students based on district quota.", tip: "Obtain your NMMS qualifying roll number." },
-      { stepNumber: 3, title: "Register on NSP in Class 9", description: "Once enrolled in Class 9, register on scholarships.gov.in using your NMMS credentials.", tip: "Select 'National Means Cum Merit Scholarship Scheme'." },
-      { stepNumber: 4, title: "School Headmaster Verification & DBT", description: "School verifies your admission on NSP; payment is credited every quarter via DBT.", tip: "Submit renewal on NSP each year in Class 10, 11, and 12 with 55% passing marks." }
-    ],
-    officialPortalUrl: "https://scholarships.gov.in",
-    portalName: "NSP / SCERT State Portals",
-    helpline: "011-23381662 | nmms-mhrd@gov.in",
-    faqs: [
-      { q: "Can private school students apply?", a: "No, students of private un-aided schools or central residential schools (like JNV/KVS) are not eligible." }
-    ],
-    featured: false,
-    tags: ["School", "Class 9 to 12", "NMMSS", "Merit-cum-Means", "Drop-out Prevention"]
-  },
-  {
-    id: "begum-hazrat-mahal-minority-girls",
-    name: "Begum Hazrat Mahal National Scholarship for Minority Girls",
-    provider: "Maulana Azad Education Foundation, Ministry of Minority Affairs",
-    badge: "Minority Affairs (Central)",
-    category: "Minority",
-    amount: "₹10,000 to ₹12,000 per annum",
-    maxAmountNumeric: 12000,
-    level: ["School", "10+2"],
-    applicableStates: "All India",
-    casteEligibility: ["Minority"],
-    gender: "Female",
-    incomeCeiling: 200000,
-    incomeCeilingText: "Less than ₹2.0 Lakh / year",
-    minMarks: 50,
-    deadline: "2026-11-30",
-    status: "Open",
-    daysLeft: 36,
-    fullScope: "Specifically crafted to assist meritorious girl students belonging to six notified minority communities (Muslims, Christians, Sikhs, Buddhists, Jains, and Parsis) studying in Class 9, 10, 11, and 12. Aims to stop dropouts and promote higher education among minority girls.",
-    benefits: [
-      "Class 9 & 10: ₹10,000 per annum (in two installments)",
-      "Class 11 & 12: ₹12,000 per annum (in two installments)",
-      "Disbursed directly into girl student's Aadhaar-linked bank account",
-      "No fees or charges for online submission"
-    ],
-    eligibilityCriteria: [
-      "Only for girl students belonging to notified minority communities (Muslim, Christian, Sikh, Buddhist, Jain, Parsi)",
-      "Studying in Class 9 to Class 12 in recognized schools/institutions",
-      "Secured minimum 50% marks in aggregate in previous class",
-      "Annual family income of parents/guardian from all sources not exceeding ₹2.0 Lakh"
-    ],
-    requiredDocuments: [
-      { name: "School Verification Form", description: "Duly signed and stamped by school Principal", mandatory: true },
-      { name: "Self-declaration of Minority Community", description: "Affidavit or community declaration format", mandatory: true },
-      { name: "Income Certificate", description: "Issued by Tehsildar / SDM / authorized revenue officer", mandatory: true },
-      { name: "Marksheet of Previous Class", description: "Showing at least 50% marks", mandatory: true },
-      { name: "Aadhaar Card of Student", description: "Proof of identity and address", mandatory: true }
-    ],
-    applicationSteps: [
-      { stepNumber: 1, title: "Register on National Scholarship Portal", description: "Apply online at scholarships.gov.in under Ministry of Minority Affairs.", tip: "Make sure the minority community matches your declaration." },
-      { stepNumber: 2, title: "Download School Verification Certificate", description: "Print the generated school verification form and get it signed by your school principal.", tip: "Upload the signed school certificate in PDF format." },
-      { stepNumber: 3, title: "Final Submit & School Verification", description: "Submit application; school nodal officer confirms enrollment on portal.", tip: "No hard copies need to be sent to New Delhi MAEF office." }
-    ],
-    officialPortalUrl: "https://scholarships.gov.in",
-    portalName: "National Scholarship Portal",
-    helpline: "011-23583788 | scholarship-maef@nic.in",
-    faqs: [
-      { q: "Can two sisters from the same family apply?", a: "Yes, up to two girl children from one family can avail this scholarship." }
-    ],
-    featured: false,
-    tags: ["Minority", "Girls Only", "School", "Class 9-12", "Muslim", "Christian", "Sikh", "Jain"]
+    tags: ["Abroad", "Master's", "PhD", "Ivy League", "Interest-free"]
   }
 ];
 
