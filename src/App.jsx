@@ -11,7 +11,11 @@ import PortalGuides from './components/PortalGuides';
 import FaqSection from './components/FaqSection';
 import ScholarshipDetailModal from './components/ScholarshipDetailModal';
 import ScholarshipCompareModal from './components/ScholarshipCompareModal';
+import AdminDashboard from './components/AdminDashboard';
+import NotFoundPage from './components/NotFoundPage';
+import AuthModal from './components/AuthModal';
 import Footer from './components/Footer';
+import api from './services/api';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('browse');
@@ -19,6 +23,10 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedScholarship, setSelectedScholarship] = useState(null);
   const [isCompareOpen, setIsCompareOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
+  // Current authenticated user state
+  const [currentUser, setCurrentUser] = useState(() => api.currentUser);
 
   // Language state persisted in localStorage
   const [language, setLanguage] = useState(() => {
@@ -84,6 +92,23 @@ export default function App() {
     });
   };
 
+  const handleAuthSuccess = (user) => {
+    setCurrentUser(user);
+    if (user.role === 'ROLE_ADMIN') {
+      setActiveTab('admin');
+    }
+  };
+
+  const handleLogout = () => {
+    api.logout();
+    setCurrentUser(null);
+    if (activeTab === 'admin') {
+      setActiveTab('browse');
+    }
+  };
+
+  const validTabs = ['browse', 'checker', 'validator', 'bonafide', 'docs', 'tracker', 'guides', 'faq', 'admin'];
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors">
       {/* Navigation Header */}
@@ -97,6 +122,9 @@ export default function App() {
         onOpenCompare={() => setIsCompareOpen(true)}
         language={language}
         setLanguage={setLanguage}
+        currentUser={currentUser}
+        onOpenAuthModal={() => setIsAuthModalOpen(true)}
+        onLogout={handleLogout}
       />
 
       {/* Hero section on Browse tab */}
@@ -167,6 +195,40 @@ export default function App() {
         {activeTab === 'faq' && (
           <FaqSection />
         )}
+
+        {/* Protected Admin Dashboard */}
+        {activeTab === 'admin' && (
+          currentUser && currentUser.role === 'ROLE_ADMIN' ? (
+            <AdminDashboard
+              currentUser={currentUser}
+              onSelectScholarship={setSelectedScholarship}
+            />
+          ) : (
+            <div className="max-w-md mx-auto my-16 p-8 text-center bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-red-200 dark:border-red-900 space-y-4">
+              <div className="w-12 h-12 mx-auto rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-xl">
+                ✕
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Admin Access Restricted</h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                You must sign in with an account having administrator privileges (ROLE_ADMIN) to view the JanSaahay management console.
+              </p>
+              <button
+                onClick={() => setIsAuthModalOpen(true)}
+                className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow"
+              >
+                Sign In as Admin
+              </button>
+            </div>
+          )
+        )}
+
+        {/* 404 View for Invalid / Unrecognized Routes */}
+        {!validTabs.includes(activeTab) && (
+          <NotFoundPage
+            onGoHome={() => setActiveTab('browse')}
+            onGoBrowse={() => setActiveTab('browse')}
+          />
+        )}
       </main>
 
       {/* Scholarship Detail Modal */}
@@ -187,6 +249,13 @@ export default function App() {
           setIsCompareOpen(false);
           setSelectedScholarship(sch);
         }}
+      />
+
+      {/* Authentication Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        onAuthSuccess={handleAuthSuccess}
       />
 
       {/* Footer */}

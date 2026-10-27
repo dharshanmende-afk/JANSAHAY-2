@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Heart, ShieldCheck, ExternalLink } from 'lucide-react';
+import { GraduationCap, Heart, ShieldCheck, ExternalLink, AlertCircle } from 'lucide-react';
 
 const GithubIcon = ({ className = "w-4 h-4" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -12,11 +12,19 @@ export default function Footer({ setActiveTab }) {
     <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
+        {/* Important Official Disclaimer Notice */}
+        <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 leading-relaxed flex items-start gap-3">
+          <AlertCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+          <div>
+            <strong className="text-slate-800 dark:text-slate-200">Official Disclaimer & Public Service Notice:</strong> JANSAAHAY is an independent scholarship discovery, eligibility evaluation, and application-guidance platform for Indian students. We never charge any fee from applicants, nor do we accept scholarship applications or disburse grants directly. All eligibility checks are personalized simulations based on published government gazettes and trust guidelines. Applicants must always verify deadlines, eligibility rules, and submission procedures on the respective official government and organization portals before final submission.
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-3 md:col-span-1">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+              <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white">
                 <GraduationCap className="w-5 h-5" />
               </div>
               <span className="text-lg font-black tracking-tight text-slate-900 dark:text-white">
@@ -24,10 +32,10 @@ export default function Footer({ setActiveTab }) {
               </span>
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Transparent, democratized scholarship discovery and eligibility platform empowering every Indian student to claim their rightful educational grants.
+              Transparent, democratized scholarship discovery and personalized eligibility platform empowering every Indian student to claim their rightful educational grants.
             </p>
             <div className="text-xs font-mono text-slate-500">
-              Developed by <strong className="text-blue-600 dark:text-blue-400">dharshanmende-afk</strong>
+              Maintained by <strong className="text-emerald-600 dark:text-emerald-400">dharshanmende-afk</strong>
             </div>
           </div>
 
@@ -38,32 +46,32 @@ export default function Footer({ setActiveTab }) {
             </h4>
             <ul className="space-y-1.5 text-xs">
               <li>
-                <button onClick={() => setActiveTab('browse')} className="hover:text-blue-600 transition">
-                  Explore All Scholarships
+                <button onClick={() => setActiveTab('browse')} className="hover:text-emerald-600 transition">
+                  Explore Verified Scholarships
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('checker')} className="hover:text-blue-600 transition">
+                <button onClick={() => setActiveTab('checker')} className="hover:text-emerald-600 transition">
                   Smart Eligibility Matcher
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('validator')} className="hover:text-blue-600 transition">
+                <button onClick={() => setActiveTab('validator')} className="hover:text-emerald-600 transition">
                   PFMS Name Mismatch Check
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('bonafide')} className="hover:text-blue-600 transition">
+                <button onClick={() => setActiveTab('bonafide')} className="hover:text-emerald-600 transition">
                   Bonafide Certificate Generator
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('docs')} className="hover:text-blue-600 transition">
+                <button onClick={() => setActiveTab('docs')} className="hover:text-emerald-600 transition">
                   Document Readiness Audit
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('tracker')} className="hover:text-blue-600 transition">
+                <button onClick={() => setActiveTab('tracker')} className="hover:text-emerald-600 transition">
                   Application Tracker
                 </button>
               </li>
@@ -77,25 +85,25 @@ export default function Footer({ setActiveTab }) {
             </h4>
             <ul className="space-y-1.5 text-xs">
               <li>
-                <a href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 flex items-center space-x-1">
+                <a href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 flex items-center space-x-1">
                   <span>National Scholarship Portal (NSP)</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
               <li>
-                <a href="https://www.aicte-india.org" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 flex items-center space-x-1">
+                <a href="https://www.aicte-india.org" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 flex items-center space-x-1">
                   <span>AICTE Schemes Portal</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
               <li>
-                <a href="https://pfms.nic.in" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 flex items-center space-x-1">
+                <a href="https://pfms.nic.in" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 flex items-center space-x-1">
                   <span>PFMS Direct Benefit Transfer (DBT)</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
               <li>
-                <a href="https://resident.uidai.gov.in/bank-mapper" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 flex items-center space-x-1">
+                <a href="https://resident.uidai.gov.in/bank-mapper" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 flex items-center space-x-1">
                   <span>UIDAI Aadhaar-Bank Mapper</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
@@ -115,7 +123,7 @@ export default function Footer({ setActiveTab }) {
               href="https://github.com/dharshanmende-afk/JANSAHAY-2"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 text-xs font-medium transition"
+              className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-emerald-600 text-xs font-medium transition"
             >
               <GithubIcon className="w-4 h-4" />
               <span>github.com/dharshanmende-afk/JANSAHAY-2</span>
@@ -135,7 +143,7 @@ export default function Footer({ setActiveTab }) {
               href="https://github.com/dharshanmende-afk/JANSAHAY-2"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+              className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline"
             >
               @dharshanmende-afk
             </a>

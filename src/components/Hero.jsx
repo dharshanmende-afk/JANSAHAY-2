@@ -162,7 +162,7 @@ export default function Hero({
               <div className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Annual Fund Outlay</div>
             </div>
             <div className="p-3 rounded-xl bg-white/60 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-center">
-              <div className="text-xl sm:text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">100% Verified</div>
+              <div className="text-xl sm:text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">Curated & Verified</div>
               <div className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Steps & Direct Links</div>
             </div>
             <div className="p-3 rounded-xl bg-white/60 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-center">
@@ -176,3 +176,4 @@ export default function Hero({
     </div>
   );
 }
+

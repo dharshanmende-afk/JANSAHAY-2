@@ -227,7 +227,7 @@ export default function NameMismatchValidator() {
           onClick={() => applyPreset('perfect')}
           className="px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-semibold hover:bg-emerald-200 transition"
         >
-          ✓ 100% Perfect Match
+          ✓ Exact Match
         </button>
         <button
           onClick={() => applyPreset('inverted')}
@@ -376,7 +376,7 @@ export default function NameMismatchValidator() {
               </span>
               <h3 className="text-lg sm:text-xl font-extrabold">{statusLabel}</h3>
               <p className="text-xs text-slate-300">
-                {issues.length === 0 ? "All names and dates match with 100% precision." : `${issues.length} potential roadblock(s) detected.`}
+                {issues.length === 0 ? "All names and dates match with high precision." : `${issues.length} potential roadblock(s) detected.`}
               </p>
             </div>
           </div>
@@ -416,7 +416,7 @@ export default function NameMismatchValidator() {
             <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs sm:text-sm flex items-center space-x-2.5">
               <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
               <span>
-                <strong>Perfect Demographic Alignment!</strong> Name spellings and Date of Birth match seamlessly across your 10th certificate, Aadhaar, and Bank records. You are 100% safe to submit on NSP / State Portals.
+                <strong>Perfect Demographic Alignment!</strong> Name spellings and Date of Birth match seamlessly across your 10th certificate, Aadhaar, and Bank records. Your demographic data aligns with published portal criteria.
               </span>
             </div>
           )}
@@ -514,3 +514,5 @@ export default function NameMismatchValidator() {
     </div>
   );
 }
+
+

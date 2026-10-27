@@ -113,7 +113,7 @@ export default function DocumentReadinessTool() {
           Document Readiness & DBT Audit
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
-          Over 65% of scholarship rejections happen due to minor document mistakes. Audit your checklist now to ensure 100% first-attempt approval.
+          Over 65% of scholarship rejections happen due to minor document mistakes. Audit your checklist now to ensure smooth first-attempt verification and submission.
         </p>
       </div>
 
@@ -223,3 +223,4 @@ export default function DocumentReadinessTool() {
     </div>
   );
 }
+

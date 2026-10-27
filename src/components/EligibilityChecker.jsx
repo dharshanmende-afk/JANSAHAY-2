@@ -168,7 +168,7 @@ export default function EligibilityChecker({
           Smart Eligibility Matcher
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto mt-1">
-          Tell us about your studies, income bracket, and category to calculate which scholarships you are 100% eligible to apply for today.
+          Personalized eligibility check based on published criteria across curated and regularly verified scholarships.
         </p>
       </div>
 
@@ -540,7 +540,7 @@ export default function EligibilityChecker({
                         {sch.isFullyEligible ? (
                           <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold">
                             <CheckCircle2 className="w-3.5 h-3.5" />
-                            <span>100% Eligible</span>
+                            <span>Fully Matched Criteria</span>
                           </span>
                         ) : (
                           <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-xs font-semibold">
@@ -641,3 +641,4 @@ export default function EligibilityChecker({
     </div>
   );
 }
+
